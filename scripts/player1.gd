@@ -6,12 +6,16 @@ extends CharacterBody2D
 @export var gravity: float = 2500.0
 @export var jump_force: float = -1250.0
 
+var launchVelocity = -1800
+
 var mine_dir: Vector2i = Vector2i.DOWN
 
 var playerNumber = "1"
 var bombCooldown = 0
 
 var heldBomb: Node = null
+
+var shouldLaunch = false
 
 var lastDirectionMoved = 1
 
@@ -63,6 +67,10 @@ func _physics_process(delta: float) -> void:
 
 	if Global.playerDead1:
 		Global.playerDead1 = false
+		
+	if shouldLaunch:
+		shouldLaunch = false
+		velocity.y = launchVelocity
 	move_and_slide()
 
 func pickupBomb(bomb):
@@ -77,3 +85,6 @@ func pickupBomb(bomb):
 	bomb.set_deferred("rotation", 0)
 	bomb.set_deferred("position", Vector2(0, -162))
 	return true
+
+func launch():
+	shouldLaunch = true

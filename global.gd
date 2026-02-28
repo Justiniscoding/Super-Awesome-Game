@@ -1,6 +1,10 @@
 extends Node
 
 signal bombExploded(bombPosition)
+signal getPoints(player, amount)
+
+var p1points = 0
+var p2points = 0
 
 var playerDead1 = false
 # Called when the node enters the scene tree for the first time.
