@@ -44,11 +44,12 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i) -> voi
 			erase_cell(tilemapCellPosition)
 
 func bombExploded(bombPosition) -> void:
-	print("the bomb has exlpoded")
-	print("it was at ")
-	print(bombPosition)
 	var tilemapCellPosition = local_to_map(bombPosition)
-	print(tilemapCellPosition)
-	for i in range(tilemapCellPosition.x - 5, tilemapCellPosition.x + 5):
-		for j in range(tilemapCellPosition.y - 5, tilemapCellPosition.y + 5):
-			erase_cell(Vector2i(i, j))
+
+	for i in range(tilemapCellPosition.x - 3, tilemapCellPosition.x + 3):
+		for j in range(tilemapCellPosition.y - 3, tilemapCellPosition.y + 3):
+			var distFromCenter = tilemapCellPosition - Vector2i(i, j)
+			distFromCenter = distFromCenter.length()
+
+			if randf() > distFromCenter / 4:
+				erase_cell(Vector2i(i, j))
