@@ -12,8 +12,8 @@ var bombIsThrown = false
 @onready var timer: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
-
-var throwVelocity = Vector2(100, -500)
+var exploding = false
+var throwVelocity = Vector2(5, -25)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	collision_shape_2d.disabled = true
@@ -28,6 +28,11 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.play(\"Fuse\")
 		bombIsThrown = true
 		timer.start()
+		
+	if exploding:
+		print(\"exploding\")
+		animated_sprite_2d.rotation = -1 * bomb.rotation
+
 		
 	
 
@@ -46,6 +51,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	animated_sprite_2d.play(\"Explosion\")
 	collision_shape_2d.disabled = false
+	exploding = true
 	timer_2.start()
 
 
@@ -144,7 +150,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Explosion",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -177,10 +183,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j15uc"]
-radius = 24.331053
+radius = 52.488586
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_84slv"]
-a = Vector2(9.010208, -0.90350723)
+a = Vector2(15, -10)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nxi8k"]
 a = Vector2(-7.30941, -4.424082)
@@ -190,46 +196,49 @@ b = Vector2(-9.522739, 7.370041)
 a = Vector2(7, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_84slv"]
-radius = 199.01006
+radius = 336.0952
 
 [node name="Bomb" type="RigidBody2D" unique_id=621203618]
 position = Vector2(34, 14)
+mass = 0.03
 script = SubResource("GDScript_vpdcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791282722]
-position = Vector2(34.000004, -33.000004)
-scale = Vector2(0.69200164, 0.6848455)
+position = Vector2(34.000004, -33)
+scale = Vector2(1.3173801, 1.3520209)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
-animation = &"Fuse"
+animation = &"Explosion"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
-position = Vector2(38.000008, -21.999998)
+position = Vector2(42, -9.999999)
 rotation = -3.3215415
+scale = Vector2(0.8898788, 0.90651864)
 shape = SubResource("CircleShape2D_j15uc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1580063140]
-position = Vector2(37, -60)
+position = Vector2(40, -76)
 shape = SubResource("SegmentShape2D_84slv")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=328594888]
-position = Vector2(49, -68)
+position = Vector2(62, -94)
 rotation = -1.7563028
 shape = SubResource("SegmentShape2D_nxi8k")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=789565334]
-position = Vector2(57, -69)
+position = Vector2(79, -93)
 shape = SubResource("SegmentShape2D_1hf1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=239060379]
 wait_time = 1.7999999999999998
 
 [node name="Timer2" type="Timer" parent="." unique_id=1026356175]
+wait_time = 0.5
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1399334668]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343007850]
-position = Vector2(-2, -32)
+position = Vector2(39, 20)
 shape = SubResource("CircleShape2D_84slv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
