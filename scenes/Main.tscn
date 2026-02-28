@@ -7,15 +7,15 @@
 [sub_resource type="Theme" id="Theme_fos0i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3dxm6"]
-font = ExtResource("2_rarhs")
+font = ExtResource("2_r0du0")
 font_size = 80
 
 [sub_resource type="Theme" id="Theme_lgr22"]
-default_font = ExtResource("2_rarhs")
+default_font = ExtResource("2_r0du0")
 default_font_size = 34
 
 [node name="Node2D" type="Node2D" unique_id=1159390000]
-script = ExtResource("1_0bbpv")
+script = ExtResource("1_glv2v")
 
 [node name="super awesome digging bomb game" type="Label" parent="." unique_id=600829136]
 offset_left = 48.0
