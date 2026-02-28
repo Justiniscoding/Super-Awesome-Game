@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://tot24nb2v34x"]
+[gd_scene format=3 uid="uid://yi5ly8k1wmpo"]
 
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="3_lnu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(128, 128)
@@ -66,3 +67,6 @@ shape = SubResource("WorldBoundaryShape2D_e2o6t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wallright" unique_id=1596799071]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_feb5d")
+
+[node name="Bomb" parent="." unique_id=621203618 instance=ExtResource("3_lnu2h")]
+position = Vector2(767, 420)

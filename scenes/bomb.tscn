@@ -3,27 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://cx1xlb2e2rq4q" path="res://Assets/New Piskel (1).png" id="1_vpdcx"]
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="2_j15uc"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
-[ext_resource type="Texture2D" uid="uid://dbx2rwtimkpao" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
 
 [sub_resource type="GDScript" id="GDScript_vpdcx"]
 script/source = "extends RigidBody2D
-@onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var bomb: RigidBody2D = $\".\"
+var bombIsThrown = false
+@onready var timer: Timer = $Timer
+@onready var timer_2: Timer = $Timer2
+@onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 
-
+var throwVelocity = Vector2(100, -500)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	collision_shape_2d.disabled = true
+ # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	collision_shape_2d.disabled = true
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		print(\"throw\")
+		bomb.apply_central_impulse(throwVelocity)
+		animated_sprite_2d.play(\"Fuse\")
+		bombIsThrown = true
+		timer.start()
+		
 	
 
 func explode() -> void:
 	animated_sprite_2d.play(\"Explosion\")
-	collision_shape_2d.disabled = false
 	
 
 
@@ -32,6 +41,20 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		Global.player1Dead() # Replace with function body.
 	else: if(body.name == \"player2\"):
 		Global.player2Dead()
+
+
+func _on_timer_timeout() -> void:
+	animated_sprite_2d.play(\"Explosion\")
+	collision_shape_2d.disabled = false
+	timer_2.start()
+
+
+func _on_timer_2_timeout() -> void:
+	animated_sprite_2d.stop()
+	animated_sprite_2d.hide()
+	collision_shape_2d.disabled = true
+	bomb.queue_free()
+	 # Replace with function body.
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
@@ -64,34 +87,6 @@ region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3s2y"]
 atlas = ExtResource("3_j15uc")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3nocn"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_poanl"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(0, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8gab1"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(128, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rdkyb"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(256, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sk3su"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(0, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4r2f"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(128, 256, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3s2y"]
-atlas = ExtResource("3_j15uc")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3nocn"]
@@ -118,17 +113,13 @@ region = Rect2(256, 128, 128, 128)
 atlas = ExtResource("3_j15uc")
 region = Rect2(0, 256, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3swkl"]
-atlas = ExtResource("3_j15uc")
-region = Rect2(128, 256, 128, 128)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_m3s2y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_vpdcx")
 }],
-"loop": true,
+"loop": false,
 "name": &"Bomb",
 "speed": 5.0
 }, {
@@ -157,35 +148,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m3s2y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3nocn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_poanl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8gab1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rdkyb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sk3su")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k4r2f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3swkl")
-}],
-"loop": true,
-"name": &"Fuse",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_j15uc")
 }, {
 "duration": 1.0,
@@ -211,34 +173,64 @@ animations = [{
 }],
 "loop": true,
 "name": &"Fuse",
-"speed": 5.0
+"speed": 7.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3nocn"]
-radius = 189.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_j15uc"]
-radius = 23.086792
+radius = 24.331053
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_84slv"]
+a = Vector2(9.010208, -0.90350723)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nxi8k"]
+a = Vector2(-7.30941, -4.424082)
+b = Vector2(-9.522739, 7.370041)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1hf1o"]
+a = Vector2(7, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_84slv"]
+radius = 199.01006
 
 [node name="Bomb" type="RigidBody2D" unique_id=621203618]
+position = Vector2(34, 14)
 script = SubResource("GDScript_vpdcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791282722]
-position = Vector2(2.9999962, 1.0000038)
+position = Vector2(34.000004, -33.000004)
 scale = Vector2(0.69200164, 0.6848455)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
-animation = &"Fuse"
+animation = &"Explosion"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
-position = Vector2(-9.000002, -249.00002)
+position = Vector2(38.000008, -21.999998)
 rotation = -3.3215415
-shape = SubResource("CircleShape2D_3nocn")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=267873145]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=458787610]
-position = Vector2(38, -22)
 shape = SubResource("CircleShape2D_j15uc")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1580063140]
+position = Vector2(37, -60)
+shape = SubResource("SegmentShape2D_84slv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=328594888]
+position = Vector2(49, -68)
+rotation = -1.7563028
+shape = SubResource("SegmentShape2D_nxi8k")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=789565334]
+position = Vector2(57, -69)
+shape = SubResource("SegmentShape2D_1hf1o")
+
+[node name="Timer" type="Timer" parent="." unique_id=239060379]
+
+[node name="Timer2" type="Timer" parent="." unique_id=1026356175]
+wait_time = 0.5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1399334668]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343007850]
+position = Vector2(-2, -32)
+shape = SubResource("CircleShape2D_84slv")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
