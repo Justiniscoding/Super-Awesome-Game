@@ -17,7 +17,7 @@ default_font_size = 34
 [node name="Node2D" type="Node2D" unique_id=1159390000]
 script = ExtResource("1_glv2v")
 
-[node name="Label" type="Label" parent="." unique_id=600829136]
+[node name="super awesome digging bomb game" type="Label" parent="." unique_id=600829136]
 offset_left = 48.0
 offset_top = 92.0
 offset_right = 1063.0
@@ -28,7 +28,7 @@ label_settings = SubResource("LabelSettings_3dxm6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1572279383]
+[node name="play" type="Button" parent="." unique_id=1572279383]
 offset_left = 444.0
 offset_top = 314.0
 offset_right = 675.0

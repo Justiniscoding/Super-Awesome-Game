@@ -1,3 +1,68 @@
 [gd_scene format=3 uid="uid://tot24nb2v34x"]
 
+[ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://player1.gd" id="2_e2o6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
+size = Vector2(128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2o6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_80nbo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
+size = Vector2(0.99983996, 1.000771)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e2o6t"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_feb5d"]
+normal = Vector2(-1, 0)
+
 [node name="Game" type="Node2D" unique_id=843341578]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=69517666]
+position = Vector2(576, 324)
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
+script = ExtResource("2_e2o6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=60088318]
+position = Vector2(364, 385)
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
+position = Vector2(364, 385)
+sprite_frames = SubResource("SpriteFrames_e2o6t")
+
+[node name="floor" type="CharacterBody2D" parent="." unique_id=958504534]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=596863702]
+position = Vector2(575.59375, 587.9375)
+scale = Vector2(1171, 162.00002)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="floor" unique_id=40474836]
+position = Vector2(575.50006, 588)
+scale = Vector2(1171, 162.00002)
+texture = SubResource("CanvasTexture_e2o6t")
+
+[node name="wallleft" type="CharacterBody2D" parent="." unique_id=244854227]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallleft" unique_id=1035569045]
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="wallright" type="CharacterBody2D" parent="." unique_id=183744076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallright" unique_id=1596799071]
+position = Vector2(1152, 0)
+shape = SubResource("WorldBoundaryShape2D_feb5d")
