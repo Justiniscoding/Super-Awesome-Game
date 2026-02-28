@@ -30,6 +30,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if exploding:
 		animated_sprite_2d.rotation = -1 * bomb.rotation
+	if $\"Bomb Pickup\".has_overlapping_bodies() and not isPickedUp:
+		for body in $\"Bomb Pickup\".get_overlapping_bodies():
+			if body.name.begins_with(\"player\"):
+				isPickedUp = body.pickupBomb(self)
+				break
 
 func throw(playerDirection):
 		apply_central_impulse(throwVelocity * Vector2(playerDirection, 1))
@@ -65,11 +70,6 @@ func _on_timer_2_timeout() -> void:
 	collision_shape_2d.disabled = true
 	bomb.queue_free()
 	 # Replace with function body.
-
-
-func _on_bomb_pickup_body_entered(body: Node2D) -> void:
-	if body.name.begins_with(\"player\") and not isPickedUp:
-		isPickedUp = body.pickupBomb(self)
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
