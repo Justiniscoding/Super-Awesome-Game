@@ -68,4 +68,5 @@ func pickupBomb(bomb):
 	bomb.call_deferred("reparent", self)
 	bomb.set_deferred("rotation", 0)
 	bomb.set_deferred("position", Vector2(0, -112))
+	bomb.z_index = 999
 	return true
