@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1xlb2e2rq4q" path="res://Assets/New Piskel (1).png" id="1_vpdcx"]
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="2_j15uc"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
+[ext_resource type="AudioStream" uid="uid://d3xvj80urf6w7" path="res://Assets/explode.mp3" id="4_84slv"]
 
 [sub_resource type="GDScript" id="GDScript_vpdcx"]
 script/source = "extends RigidBody2D
@@ -14,6 +15,9 @@ var bombIsThrown = false
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 var exploding = false
 var throwVelocity = Vector2(5, -25)
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	collision_shape_2d.disabled = true
@@ -50,6 +54,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	animated_sprite_2d.play(\"Explosion\")
+	audio_stream_player_2d.play()
 	collision_shape_2d.disabled = false
 	exploding = true
 	timer_2.start()
@@ -240,6 +245,9 @@ wait_time = 0.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343007850]
 position = Vector2(39, 20)
 shape = SubResource("CircleShape2D_84slv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1647867780]
+stream = ExtResource("4_84slv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
