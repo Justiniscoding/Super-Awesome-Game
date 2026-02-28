@@ -98,16 +98,13 @@ region = Rect2(256, 256, 256, 256)
 atlas = ExtResource("5_0tnpc")
 region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
-atlas = ExtResource("5_0tnpc")
-region = Rect2(256, 256, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
-atlas = ExtResource("5_0tnpc")
-region = Rect2(0, 512, 256, 256)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_e2o6t"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"2 idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_lnu2h")
@@ -201,12 +198,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_trtic")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dinhu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kvuet")
 }],
 "loop": true,
 "name": &"running",
@@ -581,9 +572,10 @@ isPlayer2 = true
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player2" unique_id=1868923897]
-scale = Vector2(2, 2)
+position = Vector2(0, -27.999998)
+scale = Vector2(2.242, 2.242)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
-animation = &"player2_left"
+animation = &"running"
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
 z_index = 10

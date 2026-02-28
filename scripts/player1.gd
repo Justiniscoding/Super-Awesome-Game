@@ -37,6 +37,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.025)
 
+	if input_dir == 0:
+		if isPlayer2:
+			$playersprite.play("running")
+		else:
+			$playersprite.play("running")
+	elif input_dir == 1:
+		$playersprite.play("player1_right" if !isPlayer2 else "player2_right")
+	elif input_dir == -1:
+		$playersprite.play("player1_left" if !isPlayer2 else "player2_left")
+
 	if Input.is_action_just_pressed(playerNumber + "move_up") and (is_on_floor() or is_on_wall()):
 		velocity.y = jump_force
 
