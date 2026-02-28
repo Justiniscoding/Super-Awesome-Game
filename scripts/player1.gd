@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var gravity: float = 900.0
 @export var jump_force: float = -500.0
 
+var restartPosition = Vector2(250, 500)
+
 func _physics_process(delta: float) -> void:
 	# gravity
 	if not is_on_floor():
@@ -23,5 +25,6 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and Input.is_action_pressed("1move_down"):
 		get_parent().get_node("TileMapLayer").mineBlock(position, delta)
 		
-	
+	if Global.playerDead1:
+		position = restartPosition
 	move_and_slide()

@@ -44,8 +44,9 @@ func explode() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if(body.name == \"player1\"):
-		Global.player1Dead() # Replace with function body.
+	if(body.name == \"player\"):
+		Global.player1Dead()
+		print(\"dead player\") # Replace with function body.
 	else: if(body.name == \"player2\"):
 		Global.player2Dead()
 
@@ -249,3 +250,4 @@ stream = ExtResource("4_84slv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
