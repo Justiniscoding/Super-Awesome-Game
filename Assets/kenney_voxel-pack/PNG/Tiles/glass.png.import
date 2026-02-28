@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p8vd6fj1011e"
-path="res://.godot/imported/glass.png-922834d120cad3fb4cd21ed970aac97a.ctex"
+path="res://.godot/imported/glass.png-b03fc6bda4c228a2204581b6ab223467.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/glass.png"
-dest_files=["res://.godot/imported/glass.png-922834d120cad3fb4cd21ed970aac97a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/glass.png"
+dest_files=["res://.godot/imported/glass.png-b03fc6bda4c228a2204581b6ab223467.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://d7qpfcvcjaqa"
-path="res://.godot/imported/dreamplanner.otf-eb8d2284a5fc9705f4873dd68aa24525.fontdata"
+path="res://.godot/imported/dreamplanner.otf-79e7b5b64577e2d43b4e47a909a04676.fontdata"
 
 [deps]
 
-source_file="res://assets/dreamplanner.otf"
-dest_files=["res://.godot/imported/dreamplanner.otf-eb8d2284a5fc9705f4873dd68aa24525.fontdata"]
+source_file="res://Assets/dreamplanner.otf"
+dest_files=["res://.godot/imported/dreamplanner.otf-79e7b5b64577e2d43b4e47a909a04676.fontdata"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3mcxi52fv8db"
-path="res://.godot/imported/gravel_dirt.png-5b375f1554414b3151ddd66fbc8c38ce.ctex"
+path="res://.godot/imported/gravel_dirt.png-527175e86c58706e1cb436d4631668c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/gravel_dirt.png"
-dest_files=["res://.godot/imported/gravel_dirt.png-5b375f1554414b3151ddd66fbc8c38ce.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/gravel_dirt.png"
+dest_files=["res://.godot/imported/gravel_dirt.png-527175e86c58706e1cb436d4631668c2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbsk6nmakxb84"
-path="res://.godot/imported/stone_coal.png-238a64b7e716ab8a792906f772b143aa.ctex"
+path="res://.godot/imported/stone_coal.png-cc602f6165327f57d695df8e77debf0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/stone_coal.png"
-dest_files=["res://.godot/imported/stone_coal.png-238a64b7e716ab8a792906f772b143aa.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/stone_coal.png"
+dest_files=["res://.godot/imported/stone_coal.png-cc602f6165327f57d695df8e77debf0f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv6yxausfjxpe"
-path="res://.godot/imported/female_leg.png-b72d2b7872725cd4f82d5a7c07f967f8.ctex"
+path="res://.godot/imported/female_leg.png-d3a12d83f5817d0946e53bec4c61cb83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Player female/female_leg.png"
-dest_files=["res://.godot/imported/female_leg.png-b72d2b7872725cd4f82d5a7c07f967f8.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Player female/female_leg.png"
+dest_files=["res://.godot/imported/female_leg.png-d3a12d83f5817d0946e53bec4c61cb83.ctex"]
 
 [params]
 

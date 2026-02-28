@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crlvqcgga4mhm"
-path="res://.godot/imported/alien_leg.png-5344d58ff9fe27d8fb63ef51a27fe064.ctex"
+path="res://.godot/imported/alien_leg.png-ee1ff44f581206e14404d62d8bf234b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Alien/alien_leg.png"
-dest_files=["res://.godot/imported/alien_leg.png-5344d58ff9fe27d8fb63ef51a27fe064.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Alien/alien_leg.png"
+dest_files=["res://.godot/imported/alien_leg.png-ee1ff44f581206e14404d62d8bf234b9.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbb4pmbperfqo"
-path="res://.godot/imported/male_head.png-6f31545d0813f5487791ff0b6dc1ebbb.ctex"
+path="res://.godot/imported/male_head.png-93dcb2e2b5bf04fc514e010afa828124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Player male/male_head.png"
-dest_files=["res://.godot/imported/male_head.png-6f31545d0813f5487791ff0b6dc1ebbb.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Player male/male_head.png"
+dest_files=["res://.godot/imported/male_head.png-93dcb2e2b5bf04fc514e010afa828124.ctex"]
 
 [params]
 

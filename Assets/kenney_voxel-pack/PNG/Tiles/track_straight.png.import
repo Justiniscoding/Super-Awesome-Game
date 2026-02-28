@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chu0gttxdatu1"
-path="res://.godot/imported/track_straight.png-6367d381456c251d11c0238e57f0e1eb.ctex"
+path="res://.godot/imported/track_straight.png-0f9e5d437553d1c98aac7b7899176267.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/track_straight.png"
-dest_files=["res://.godot/imported/track_straight.png-6367d381456c251d11c0238e57f0e1eb.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/track_straight.png"
+dest_files=["res://.godot/imported/track_straight.png-0f9e5d437553d1c98aac7b7899176267.ctex"]
 
 [params]
 

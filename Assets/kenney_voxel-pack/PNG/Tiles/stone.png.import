@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gdp66drqsa4b"
-path="res://.godot/imported/stone.png-dad9069107c3db4b97c4b847b71b5782.ctex"
+path="res://.godot/imported/stone.png-8265f0eb2ef0e613337e45f618ccb364.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/stone.png"
-dest_files=["res://.godot/imported/stone.png-dad9069107c3db4b97c4b847b71b5782.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/stone.png"
+dest_files=["res://.godot/imported/stone.png-8265f0eb2ef0e613337e45f618ccb364.ctex"]
 
 [params]
 

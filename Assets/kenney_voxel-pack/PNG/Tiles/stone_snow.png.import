@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://23d84ib4g6yc"
-path="res://.godot/imported/stone_snow.png-524d81841c30be3a8df798bef7760b3c.ctex"
+path="res://.godot/imported/stone_snow.png-a471298181e8de191255f509ae8b4d59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/stone_snow.png"
-dest_files=["res://.godot/imported/stone_snow.png-524d81841c30be3a8df798bef7760b3c.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/stone_snow.png"
+dest_files=["res://.godot/imported/stone_snow.png-a471298181e8de191255f509ae8b4d59.ctex"]
 
 [params]
 

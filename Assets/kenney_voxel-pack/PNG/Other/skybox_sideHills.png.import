@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj0ikfhyl7two"
-path="res://.godot/imported/skybox_sideHills.png-81d233b403178c360f67364123f1bb32.ctex"
+path="res://.godot/imported/skybox_sideHills.png-fb01e17d818f040b402d01378e5eae9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Other/skybox_sideHills.png"
-dest_files=["res://.godot/imported/skybox_sideHills.png-81d233b403178c360f67364123f1bb32.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Other/skybox_sideHills.png"
+dest_files=["res://.godot/imported/skybox_sideHills.png-fb01e17d818f040b402d01378e5eae9c.ctex"]
 
 [params]
 

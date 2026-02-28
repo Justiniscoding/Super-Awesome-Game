@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwwu6yc3f6wb4"
-path="res://.godot/imported/boar_head.png-7a186a6645e05e8539525dbb263980ee.ctex"
+path="res://.godot/imported/boar_head.png-ea12e3feb5a9adadb407c316f7e541a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Boar/boar_head.png"
-dest_files=["res://.godot/imported/boar_head.png-7a186a6645e05e8539525dbb263980ee.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Boar/boar_head.png"
+dest_files=["res://.godot/imported/boar_head.png-ea12e3feb5a9adadb407c316f7e541a5.ctex"]
 
 [params]
 

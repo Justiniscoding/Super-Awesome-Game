@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4sno46s25tat"
-path="res://.godot/imported/hedgehog_body.png-14f562a3414fa3808b3272f3e68dd8b9.ctex"
+path="res://.godot/imported/hedgehog_body.png-d8d49ad1ab31c9e145fb0b56e014abc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Hedgehog/hedgehog_body.png"
-dest_files=["res://.godot/imported/hedgehog_body.png-14f562a3414fa3808b3272f3e68dd8b9.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Hedgehog/hedgehog_body.png"
+dest_files=["res://.godot/imported/hedgehog_body.png-d8d49ad1ab31c9e145fb0b56e014abc1.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be4hhus8m3ad2"
-path="res://.godot/imported/square_white.png-bd2905336a35afaa45c21c0ab76ee83d.ctex"
+path="res://.godot/imported/square_white.png-e7b720ba4c856eb1751a691ab6086acd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Particles/square_white.png"
-dest_files=["res://.godot/imported/square_white.png-bd2905336a35afaa45c21c0ab76ee83d.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Particles/square_white.png"
+dest_files=["res://.godot/imported/square_white.png-e7b720ba4c856eb1751a691ab6086acd.ctex"]
 
 [params]
 

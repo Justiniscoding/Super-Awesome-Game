@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm7sx8dikk8mm"
-path="res://.godot/imported/track_corner_alt.png-011e8f61a5b13536dba6273ca152073a.ctex"
+path="res://.godot/imported/track_corner_alt.png-b4455b3e53c32e3ead2777fa6f8e758b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/track_corner_alt.png"
-dest_files=["res://.godot/imported/track_corner_alt.png-011e8f61a5b13536dba6273ca152073a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/track_corner_alt.png"
+dest_files=["res://.godot/imported/track_corner_alt.png-b4455b3e53c32e3ead2777fa6f8e758b.ctex"]
 
 [params]
 

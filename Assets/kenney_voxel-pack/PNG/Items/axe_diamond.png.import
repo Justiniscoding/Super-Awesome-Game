@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbfyvofqjyesk"
-path="res://.godot/imported/axe_diamond.png-c32f140a939b737eaedf5cf0a4461832.ctex"
+path="res://.godot/imported/axe_diamond.png-3c5105e8a0b23aacbd168ce3e715203e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/axe_diamond.png"
-dest_files=["res://.godot/imported/axe_diamond.png-c32f140a939b737eaedf5cf0a4461832.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/axe_diamond.png"
+dest_files=["res://.godot/imported/axe_diamond.png-3c5105e8a0b23aacbd168ce3e715203e.ctex"]
 
 [params]
 

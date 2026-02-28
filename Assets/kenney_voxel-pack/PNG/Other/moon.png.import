@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://eg4avxfwuk42"
-path="res://.godot/imported/moon.png-730ade46b642497aca75e92d5808b40e.ctex"
+path="res://.godot/imported/moon.png-a5ee194d312bc92bc588f43f9c22e088.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Other/moon.png"
-dest_files=["res://.godot/imported/moon.png-730ade46b642497aca75e92d5808b40e.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Other/moon.png"
+dest_files=["res://.godot/imported/moon.png-a5ee194d312bc92bc588f43f9c22e088.ctex"]
 
 [params]
 

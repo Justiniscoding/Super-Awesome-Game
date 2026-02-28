@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2qo7w2rlhlli"
-path="res://.godot/imported/male_leg.png-31b3cc9a0711fa37e82073f8d5f287b2.ctex"
+path="res://.godot/imported/male_leg.png-e23de18375d80b42db546c5866147ae6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Player male/male_leg.png"
-dest_files=["res://.godot/imported/male_leg.png-31b3cc9a0711fa37e82073f8d5f287b2.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Player male/male_leg.png"
+dest_files=["res://.godot/imported/male_leg.png-e23de18375d80b42db546c5866147ae6.ctex"]
 
 [params]
 

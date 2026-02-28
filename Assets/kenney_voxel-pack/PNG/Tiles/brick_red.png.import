@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://g5cpaie6q5ud"
-path="res://.godot/imported/brick_red.png-40c7768a3e96be714a9b6bfed61be175.ctex"
+path="res://.godot/imported/brick_red.png-b8aa85f1fb5db9e2ead3e968bf459b39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/brick_red.png"
-dest_files=["res://.godot/imported/brick_red.png-40c7768a3e96be714a9b6bfed61be175.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/brick_red.png"
+dest_files=["res://.godot/imported/brick_red.png-b8aa85f1fb5db9e2ead3e968bf459b39.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2tehq3srbnl"
-path="res://.godot/imported/gnome_body.png-173d72683e4c1a629d00d5efe0f84632.ctex"
+path="res://.godot/imported/gnome_body.png-b4b1817f8307b79373852d6405ae077c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Gnome/gnome_body.png"
-dest_files=["res://.godot/imported/gnome_body.png-173d72683e4c1a629d00d5efe0f84632.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Gnome/gnome_body.png"
+dest_files=["res://.godot/imported/gnome_body.png-b4b1817f8307b79373852d6405ae077c.ctex"]
 
 [params]
 

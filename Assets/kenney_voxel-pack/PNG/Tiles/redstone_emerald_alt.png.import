@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccbyqpf2wvd3q"
-path="res://.godot/imported/redstone_emerald_alt.png-351e2c62d1567f697074d546053058e3.ctex"
+path="res://.godot/imported/redstone_emerald_alt.png-de200961b69844f5724a88e7eca6b8ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/redstone_emerald_alt.png"
-dest_files=["res://.godot/imported/redstone_emerald_alt.png-351e2c62d1567f697074d546053058e3.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/redstone_emerald_alt.png"
+dest_files=["res://.godot/imported/redstone_emerald_alt.png-de200961b69844f5724a88e7eca6b8ee.ctex"]
 
 [params]
 

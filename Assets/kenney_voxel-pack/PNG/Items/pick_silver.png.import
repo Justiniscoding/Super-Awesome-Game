@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckus068vda7s5"
-path="res://.godot/imported/pick_silver.png-a1da6a03d57a0ca8c0a69909207b00cc.ctex"
+path="res://.godot/imported/pick_silver.png-02fef489eb268cd6599438c8640a4245.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/pick_silver.png"
-dest_files=["res://.godot/imported/pick_silver.png-a1da6a03d57a0ca8c0a69909207b00cc.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/pick_silver.png"
+dest_files=["res://.godot/imported/pick_silver.png-02fef489eb268cd6599438c8640a4245.ctex"]
 
 [params]
 

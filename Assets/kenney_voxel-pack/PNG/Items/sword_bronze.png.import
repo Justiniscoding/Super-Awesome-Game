@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bujdssxillxdh"
-path="res://.godot/imported/sword_bronze.png-0dbcfa5e9bb86e2aa641e46e661fbd0c.ctex"
+path="res://.godot/imported/sword_bronze.png-f184b75a29118f08eaadf6a74879903d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/sword_bronze.png"
-dest_files=["res://.godot/imported/sword_bronze.png-0dbcfa5e9bb86e2aa641e46e661fbd0c.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/sword_bronze.png"
+dest_files=["res://.godot/imported/sword_bronze.png-f184b75a29118f08eaadf6a74879903d.ctex"]
 
 [params]
 

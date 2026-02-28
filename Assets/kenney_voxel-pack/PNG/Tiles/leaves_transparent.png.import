@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bplv6ac47n14v"
-path="res://.godot/imported/leaves_transparent.png-e51f5da9fd7ba66c59fe76ce14915c6c.ctex"
+path="res://.godot/imported/leaves_transparent.png-496e504259e24b13869e65d089440e78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/leaves_transparent.png"
-dest_files=["res://.godot/imported/leaves_transparent.png-e51f5da9fd7ba66c59fe76ce14915c6c.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/leaves_transparent.png"
+dest_files=["res://.godot/imported/leaves_transparent.png-496e504259e24b13869e65d089440e78.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c28sjawxsvljy"
-path="res://.godot/imported/vector_characters.svg-1abf497ed615fab36e814d8f34cabb2b.ctex"
+path="res://.godot/imported/vector_characters.svg-cfe4604a0b7c689853bfd79b5b73730e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/Vector/vector_characters.svg"
-dest_files=["res://.godot/imported/vector_characters.svg-1abf497ed615fab36e814d8f34cabb2b.ctex"]
+source_file="res://Assets/kenney_voxel-pack/Vector/vector_characters.svg"
+dest_files=["res://.godot/imported/vector_characters.svg-cfe4604a0b7c689853bfd79b5b73730e.ctex"]
 
 [params]
 

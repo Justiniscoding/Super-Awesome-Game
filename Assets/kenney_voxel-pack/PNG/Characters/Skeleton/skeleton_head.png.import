@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5ksiofsibdjg"
-path="res://.godot/imported/skeleton_head.png-29e1af78b85f8a11842c33fad4610a3f.ctex"
+path="res://.godot/imported/skeleton_head.png-72a92c48a9488f2477603af5f2d3263b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Skeleton/skeleton_head.png"
-dest_files=["res://.godot/imported/skeleton_head.png-29e1af78b85f8a11842c33fad4610a3f.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Skeleton/skeleton_head.png"
+dest_files=["res://.godot/imported/skeleton_head.png-72a92c48a9488f2477603af5f2d3263b.ctex"]
 
 [params]
 

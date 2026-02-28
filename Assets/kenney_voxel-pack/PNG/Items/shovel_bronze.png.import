@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vrf5qdpgkqwq"
-path="res://.godot/imported/shovel_bronze.png-ec5f5bf93f9af936db94366ee873e919.ctex"
+path="res://.godot/imported/shovel_bronze.png-cd32d4231709fd639eb065b5e893857c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/shovel_bronze.png"
-dest_files=["res://.godot/imported/shovel_bronze.png-ec5f5bf93f9af936db94366ee873e919.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/shovel_bronze.png"
+dest_files=["res://.godot/imported/shovel_bronze.png-cd32d4231709fd639eb065b5e893857c.ctex"]
 
 [params]
 

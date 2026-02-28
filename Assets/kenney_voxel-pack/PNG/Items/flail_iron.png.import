@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhs2mtuy8vs0k"
-path="res://.godot/imported/flail_iron.png-2f433f241fc6b4559d66872d781395f3.ctex"
+path="res://.godot/imported/flail_iron.png-9a158c9aa2113d1d231fd911f58f8e7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/flail_iron.png"
-dest_files=["res://.godot/imported/flail_iron.png-2f433f241fc6b4559d66872d781395f3.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/flail_iron.png"
+dest_files=["res://.godot/imported/flail_iron.png-9a158c9aa2113d1d231fd911f58f8e7d.ctex"]
 
 [params]
 

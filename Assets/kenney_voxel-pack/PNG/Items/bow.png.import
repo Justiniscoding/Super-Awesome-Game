@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo60e0ydpqie7"
-path="res://.godot/imported/bow.png-e839577a4315ee45166c0dc445a3ec8d.ctex"
+path="res://.godot/imported/bow.png-5406311633f8bfe6e93d5ec664d251b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/bow.png"
-dest_files=["res://.godot/imported/bow.png-e839577a4315ee45166c0dc445a3ec8d.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/bow.png"
+dest_files=["res://.godot/imported/bow.png-5406311633f8bfe6e93d5ec664d251b2.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bucom3s5w2k88"
-path="res://.godot/imported/pick_iron.png-98352a9acf51fe00cb5e77dadc54cfc3.ctex"
+path="res://.godot/imported/pick_iron.png-5d5f26da1190a485bb72065af933558b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/pick_iron.png"
-dest_files=["res://.godot/imported/pick_iron.png-98352a9acf51fe00cb5e77dadc54cfc3.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/pick_iron.png"
+dest_files=["res://.godot/imported/pick_iron.png-5d5f26da1190a485bb72065af933558b.ctex"]
 
 [params]
 

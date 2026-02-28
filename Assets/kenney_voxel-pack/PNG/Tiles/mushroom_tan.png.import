@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtu8m70gmak7o"
-path="res://.godot/imported/mushroom_tan.png-7979cc023a55ee52e8264a7caa7da3a0.ctex"
+path="res://.godot/imported/mushroom_tan.png-47e0071e80c3da3c873bdae45412ccdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/mushroom_tan.png"
-dest_files=["res://.godot/imported/mushroom_tan.png-7979cc023a55ee52e8264a7caa7da3a0.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/mushroom_tan.png"
+dest_files=["res://.godot/imported/mushroom_tan.png-47e0071e80c3da3c873bdae45412ccdd.ctex"]
 
 [params]
 

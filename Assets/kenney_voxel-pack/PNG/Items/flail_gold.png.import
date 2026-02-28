@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://542vhaaulpk1"
-path="res://.godot/imported/flail_gold.png-3f341c73346b8fcb7f4d56679dd4ab42.ctex"
+path="res://.godot/imported/flail_gold.png-f0f926a32963addb0e86c37a063f71ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/flail_gold.png"
-dest_files=["res://.godot/imported/flail_gold.png-3f341c73346b8fcb7f4d56679dd4ab42.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/flail_gold.png"
+dest_files=["res://.godot/imported/flail_gold.png-f0f926a32963addb0e86c37a063f71ac.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyn2djbyijnya"
-path="res://.godot/imported/sword_silver.png-14dd068c57ad97e4d41336efbb3d12ef.ctex"
+path="res://.godot/imported/sword_silver.png-c618729d08c227ea59d9707d56347a42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/sword_silver.png"
-dest_files=["res://.godot/imported/sword_silver.png-14dd068c57ad97e4d41336efbb3d12ef.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/sword_silver.png"
+dest_files=["res://.godot/imported/sword_silver.png-c618729d08c227ea59d9707d56347a42.ctex"]
 
 [params]
 

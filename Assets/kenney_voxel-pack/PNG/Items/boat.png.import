@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhnw65iafyxhu"
-path="res://.godot/imported/boat.png-ebe8c8f7cbffa7679bd7960b53a42d64.ctex"
+path="res://.godot/imported/boat.png-c65afad1072c7bca3f6f2a16a76598bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/boat.png"
-dest_files=["res://.godot/imported/boat.png-ebe8c8f7cbffa7679bd7960b53a42d64.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/boat.png"
+dest_files=["res://.godot/imported/boat.png-c65afad1072c7bca3f6f2a16a76598bc.ctex"]
 
 [params]
 

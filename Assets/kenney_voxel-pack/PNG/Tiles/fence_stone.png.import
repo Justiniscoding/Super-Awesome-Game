@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0wqwkvc8lo11"
-path="res://.godot/imported/fence_stone.png-f8540376601336bad8bff7c420098bb5.ctex"
+path="res://.godot/imported/fence_stone.png-195795ea3256557d75caf7af56c0fd38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/fence_stone.png"
-dest_files=["res://.godot/imported/fence_stone.png-f8540376601336bad8bff7c420098bb5.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/fence_stone.png"
+dest_files=["res://.godot/imported/fence_stone.png-195795ea3256557d75caf7af56c0fd38.ctex"]
 
 [params]
 

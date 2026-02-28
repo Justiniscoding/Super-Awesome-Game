@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh2yd7anrk8s4"
-path="res://.godot/imported/greystone_ruby.png-a381eefef6a44d925f6cc45b9d5c5b1c.ctex"
+path="res://.godot/imported/greystone_ruby.png-069841ddd834198574ebd066a4760ad6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/greystone_ruby.png"
-dest_files=["res://.godot/imported/greystone_ruby.png-a381eefef6a44d925f6cc45b9d5c5b1c.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/greystone_ruby.png"
+dest_files=["res://.godot/imported/greystone_ruby.png-069841ddd834198574ebd066a4760ad6.ctex"]
 
 [params]
 

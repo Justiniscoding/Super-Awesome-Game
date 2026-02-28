@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ljxsya85p1br"
-path="res://.godot/imported/trunk_mid.png-3eab614e7c4145cd9ccf56cca6e5b0ef.ctex"
+path="res://.godot/imported/trunk_mid.png-b1f80d8ebf7a453c84e177b2204a208d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/trunk_mid.png"
-dest_files=["res://.godot/imported/trunk_mid.png-3eab614e7c4145cd9ccf56cca6e5b0ef.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/trunk_mid.png"
+dest_files=["res://.godot/imported/trunk_mid.png-b1f80d8ebf7a453c84e177b2204a208d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b88v40ybvxybl"
-path="res://.godot/imported/zombie_head.png-10d4e3e95f09492cdc7ebf3a5dff31fb.ctex"
+path="res://.godot/imported/zombie_head.png-c32df21846d660158b4c784576ddef96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Zombie/zombie_head.png"
-dest_files=["res://.godot/imported/zombie_head.png-10d4e3e95f09492cdc7ebf3a5dff31fb.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Zombie/zombie_head.png"
+dest_files=["res://.godot/imported/zombie_head.png-c32df21846d660158b4c784576ddef96.ctex"]
 
 [params]
 

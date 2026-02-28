@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cff7sp2rnl83x"
-path="res://.godot/imported/grass_tan.png-d13f021f59b3db3945a118d80afe9191.ctex"
+path="res://.godot/imported/grass_tan.png-deab15e260c1d88b70f2add3d8f1d1c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/grass_tan.png"
-dest_files=["res://.godot/imported/grass_tan.png-d13f021f59b3db3945a118d80afe9191.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/grass_tan.png"
+dest_files=["res://.godot/imported/grass_tan.png-deab15e260c1d88b70f2add3d8f1d1c4.ctex"]
 
 [params]
 

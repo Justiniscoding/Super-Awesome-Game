@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnl53t5hm0l6o"
-path="res://.godot/imported/stone_grass.png-dcfc7c8f2199b00a52026b6782556e08.ctex"
+path="res://.godot/imported/stone_grass.png-91ef033992ddaf8f99cabd472a591841.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/stone_grass.png"
-dest_files=["res://.godot/imported/stone_grass.png-dcfc7c8f2199b00a52026b6782556e08.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/stone_grass.png"
+dest_files=["res://.godot/imported/stone_grass.png-91ef033992ddaf8f99cabd472a591841.ctex"]
 
 [params]
 

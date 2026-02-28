@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckf5jgi4yukgk"
-path="res://.godot/imported/alien_arm.png-45913645d8cf78f05067151c60f6bd4a.ctex"
+path="res://.godot/imported/alien_arm.png-a72dec6b21da3801d4f8f283fed73cf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Alien/alien_arm.png"
-dest_files=["res://.godot/imported/alien_arm.png-45913645d8cf78f05067151c60f6bd4a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Alien/alien_arm.png"
+dest_files=["res://.godot/imported/alien_arm.png-a72dec6b21da3801d4f8f283fed73cf7.ctex"]
 
 [params]
 

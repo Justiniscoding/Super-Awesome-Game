@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcpwy5b1bn62f"
-path="res://.godot/imported/hammer_gold.png-f7a7486510be2a95626e7dce9d65f27c.ctex"
+path="res://.godot/imported/hammer_gold.png-f7dc7f92b055ac7ef3494a94f532c97c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/hammer_gold.png"
-dest_files=["res://.godot/imported/hammer_gold.png-f7a7486510be2a95626e7dce9d65f27c.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/hammer_gold.png"
+dest_files=["res://.godot/imported/hammer_gold.png-f7dc7f92b055ac7ef3494a94f532c97c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg73bx4rebdgb"
-path="res://.godot/imported/sand.png-b2792374c0931d261c075b85a7ff4b52.ctex"
+path="res://.godot/imported/sand.png-0102834a850a3b6c8331cdc29344fa0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/sand.png"
-dest_files=["res://.godot/imported/sand.png-b2792374c0931d261c075b85a7ff4b52.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/sand.png"
+dest_files=["res://.godot/imported/sand.png-0102834a850a3b6c8331cdc29344fa0a.ctex"]
 
 [params]
 

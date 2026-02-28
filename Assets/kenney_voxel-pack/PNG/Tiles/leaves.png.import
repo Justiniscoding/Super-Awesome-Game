@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buwi4d67x2c8s"
-path="res://.godot/imported/leaves.png-ec89dcdbc266a46fd6808a2767a2dacd.ctex"
+path="res://.godot/imported/leaves.png-975b41bd9a1278cdd2426e1ec4125e5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/leaves.png"
-dest_files=["res://.godot/imported/leaves.png-ec89dcdbc266a46fd6808a2767a2dacd.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/leaves.png"
+dest_files=["res://.godot/imported/leaves.png-975b41bd9a1278cdd2426e1ec4125e5b.ctex"]
 
 [params]
 

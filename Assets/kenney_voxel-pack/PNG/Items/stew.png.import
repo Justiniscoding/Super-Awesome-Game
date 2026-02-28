@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mydvstr8mtyu"
-path="res://.godot/imported/stew.png-5959633fb858f250a98ff910b7ef4bd0.ctex"
+path="res://.godot/imported/stew.png-72e0baa216870faf3478eb9041a74e33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/stew.png"
-dest_files=["res://.godot/imported/stew.png-5959633fb858f250a98ff910b7ef4bd0.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/stew.png"
+dest_files=["res://.godot/imported/stew.png-72e0baa216870faf3478eb9041a74e33.ctex"]
 
 [params]
 

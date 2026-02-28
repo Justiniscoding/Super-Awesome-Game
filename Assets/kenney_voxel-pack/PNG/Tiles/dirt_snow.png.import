@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmlcvatjcr48d"
-path="res://.godot/imported/dirt_snow.png-9a5529486482493e6f041664e891a84a.ctex"
+path="res://.godot/imported/dirt_snow.png-333e10ad92039660a4a16a90f2787e64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/dirt_snow.png"
-dest_files=["res://.godot/imported/dirt_snow.png-9a5529486482493e6f041664e891a84a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/dirt_snow.png"
+dest_files=["res://.godot/imported/dirt_snow.png-333e10ad92039660a4a16a90f2787e64.ctex"]
 
 [params]
 

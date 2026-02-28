@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bia5v64osmnjn"
-path="res://.godot/imported/swirl_blue.png-93f324035606e8e1cd63c5ed99618a51.ctex"
+path="res://.godot/imported/swirl_blue.png-6c7192cef11b6d66cf9354b839a7f6a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Particles/swirl_blue.png"
-dest_files=["res://.godot/imported/swirl_blue.png-93f324035606e8e1cd63c5ed99618a51.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Particles/swirl_blue.png"
+dest_files=["res://.godot/imported/swirl_blue.png-6c7192cef11b6d66cf9354b839a7f6a9.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1m0wbu3l5yhw"
-path="res://.godot/imported/cactus_top.png-bdd2e0c0f87e581d57ff3f6b95586971.ctex"
+path="res://.godot/imported/cactus_top.png-8c2ac9848a713a551ba0ac7cbd1d5533.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Tiles/cactus_top.png"
-dest_files=["res://.godot/imported/cactus_top.png-bdd2e0c0f87e581d57ff3f6b95586971.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Tiles/cactus_top.png"
+dest_files=["res://.godot/imported/cactus_top.png-8c2ac9848a713a551ba0ac7cbd1d5533.ctex"]
 
 [params]
 

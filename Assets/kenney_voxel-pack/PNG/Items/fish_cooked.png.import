@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhtg6qnqros78"
-path="res://.godot/imported/fish_cooked.png-590cca1d62d89ae1f8ffba9af698e0b0.ctex"
+path="res://.godot/imported/fish_cooked.png-7f04167426f818bfd36f53d8665844f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/fish_cooked.png"
-dest_files=["res://.godot/imported/fish_cooked.png-590cca1d62d89ae1f8ffba9af698e0b0.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/fish_cooked.png"
+dest_files=["res://.godot/imported/fish_cooked.png-7f04167426f818bfd36f53d8665844f9.ctex"]
 
 [params]
 

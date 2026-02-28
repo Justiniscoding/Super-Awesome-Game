@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o7b1a4f424d5"
-path="res://.godot/imported/fox_body.png-1cdf33225e74c941dee0ec32295cacf4.ctex"
+path="res://.godot/imported/fox_body.png-2ef9ae94b1fb99992bee399a66a7af08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Fox/fox_body.png"
-dest_files=["res://.godot/imported/fox_body.png-1cdf33225e74c941dee0ec32295cacf4.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Fox/fox_body.png"
+dest_files=["res://.godot/imported/fox_body.png-2ef9ae94b1fb99992bee399a66a7af08.ctex"]
 
 [params]
 

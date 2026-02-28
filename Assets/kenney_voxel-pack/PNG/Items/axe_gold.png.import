@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c74fokpjrists"
-path="res://.godot/imported/axe_gold.png-031fcd27bf06256625754a8889e788b8.ctex"
+path="res://.godot/imported/axe_gold.png-fe531a92de64e427766a6ed308511354.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/axe_gold.png"
-dest_files=["res://.godot/imported/axe_gold.png-031fcd27bf06256625754a8889e788b8.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/axe_gold.png"
+dest_files=["res://.godot/imported/axe_gold.png-fe531a92de64e427766a6ed308511354.ctex"]
 
 [params]
 

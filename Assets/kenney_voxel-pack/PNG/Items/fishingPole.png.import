@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6jyprp4nm6ep"
-path="res://.godot/imported/fishingPole.png-0914554dee9d34d0bc1de71932f5b333.ctex"
+path="res://.godot/imported/fishingPole.png-3b3a8663610694df8f709d59f7079a1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/fishingPole.png"
-dest_files=["res://.godot/imported/fishingPole.png-0914554dee9d34d0bc1de71932f5b333.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/fishingPole.png"
+dest_files=["res://.godot/imported/fishingPole.png-3b3a8663610694df8f709d59f7079a1f.ctex"]
 
 [params]
 

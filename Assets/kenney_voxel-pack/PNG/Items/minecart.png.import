@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blreb0lvyb0yl"
-path="res://.godot/imported/minecart.png-b9677c18143955e86ecdc123e815393b.ctex"
+path="res://.godot/imported/minecart.png-dd761bc5bf31e537c6dadfafd9afc5a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/minecart.png"
-dest_files=["res://.godot/imported/minecart.png-b9677c18143955e86ecdc123e815393b.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/minecart.png"
+dest_files=["res://.godot/imported/minecart.png-dd761bc5bf31e537c6dadfafd9afc5a2.ctex"]
 
 [params]
 

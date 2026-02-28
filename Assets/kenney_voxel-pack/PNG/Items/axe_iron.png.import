@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqtdnxvy3rh6g"
-path="res://.godot/imported/axe_iron.png-2f247ef04cf0bd63083efd2c9d76d18f.ctex"
+path="res://.godot/imported/axe_iron.png-63cf0f0b93c1b3b6e56a9eb5df9d6af6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/axe_iron.png"
-dest_files=["res://.godot/imported/axe_iron.png-2f247ef04cf0bd63083efd2c9d76d18f.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/axe_iron.png"
+dest_files=["res://.godot/imported/axe_iron.png-63cf0f0b93c1b3b6e56a9eb5df9d6af6.ctex"]
 
 [params]
 

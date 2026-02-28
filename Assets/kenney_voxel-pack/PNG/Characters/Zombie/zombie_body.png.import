@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgtmmu80xmbh"
-path="res://.godot/imported/zombie_body.png-d35f425df994e310372244208027c43a.ctex"
+path="res://.godot/imported/zombie_body.png-538b7ff0553b48eaf6bee8bd1e8ff54d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Characters/Zombie/zombie_body.png"
-dest_files=["res://.godot/imported/zombie_body.png-d35f425df994e310372244208027c43a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Characters/Zombie/zombie_body.png"
+dest_files=["res://.godot/imported/zombie_body.png-538b7ff0553b48eaf6bee8bd1e8ff54d.ctex"]
 
 [params]
 

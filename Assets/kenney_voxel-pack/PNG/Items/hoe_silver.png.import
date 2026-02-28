@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlxkusc3a8ejr"
-path="res://.godot/imported/hoe_silver.png-17a63712a4abb9ded2a1bb8211a8276a.ctex"
+path="res://.godot/imported/hoe_silver.png-1c31fe530a2b9575704d38cab2bc5adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_voxel-pack/PNG/Items/hoe_silver.png"
-dest_files=["res://.godot/imported/hoe_silver.png-17a63712a4abb9ded2a1bb8211a8276a.ctex"]
+source_file="res://Assets/kenney_voxel-pack/PNG/Items/hoe_silver.png"
+dest_files=["res://.godot/imported/hoe_silver.png-1c31fe530a2b9575704d38cab2bc5adf.ctex"]
 
 [params]
 
