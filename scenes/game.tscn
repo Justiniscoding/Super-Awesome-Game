@@ -417,7 +417,7 @@ texture = ExtResource("1_u5sy4")
 [node name="player2" type="CharacterBody2D" parent="." unique_id=1743147397]
 modulate = Color(0.8460365, 0, 0.13476738, 1)
 z_index = 10
-position = Vector2(259, 0)
+position = Vector2(-541, -80)
 script = ExtResource("1_yqjtg")
 isPlayer2 = true
 
@@ -468,4 +468,19 @@ navigation_enabled = false
 script = ExtResource("4_lbhrr")
 
 [node name="Bomb" parent="." unique_id=621203618 instance=ExtResource("5_iywne")]
-position = Vector2(470, 427)
+position = Vector2(536, 421)
+
+[node name="Bomb2" parent="." unique_id=349750089 instance=ExtResource("5_iywne")]
+position = Vector2(1329, 27)
+
+[node name="Bomb3" parent="." unique_id=1704385875 instance=ExtResource("5_iywne")]
+position = Vector2(919, 206)
+
+[node name="Bomb4" parent="." unique_id=875557136 instance=ExtResource("5_iywne")]
+position = Vector2(1572, -422)
+
+[node name="Bomb5" parent="." unique_id=405812094 instance=ExtResource("5_iywne")]
+position = Vector2(566, -12)
+
+[node name="Bomb6" parent="." unique_id=1227150692 instance=ExtResource("5_iywne")]
+position = Vector2(1823, 63)

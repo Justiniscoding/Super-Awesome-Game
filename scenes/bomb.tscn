@@ -14,8 +14,10 @@ var bombIsThrown = false
 @onready var timer_2: Timer = $Timer2
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 var exploding = false
-var throwVelocity = Vector2(5, -25)
+var throwVelocity = Vector2(15, -25)
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+var isPickedUp = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,16 +28,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed(\"ui_accept\"):
-		bomb.apply_central_impulse(throwVelocity)
-		animated_sprite_2d.play(\"Fuse\")
-		bombIsThrown = true
-		timer.start()
-		
 	if exploding:
 		animated_sprite_2d.rotation = -1 * bomb.rotation
 
-		
+func throw(playerDirection):
+		apply_central_impulse(throwVelocity * Vector2(playerDirection, 1))
+		animated_sprite_2d.play(\"Fuse\")
+		bombIsThrown = true
+		timer.start()
 	
 
 func explode() -> void:
@@ -65,6 +65,11 @@ func _on_timer_2_timeout() -> void:
 	collision_shape_2d.disabled = true
 	bomb.queue_free()
 	 # Replace with function body.
+
+
+func _on_bomb_pickup_body_entered(body: Node2D) -> void:
+	if body.name.begins_with(\"player\") and not isPickedUp:
+		isPickedUp = body.pickupBomb(self)
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
@@ -202,35 +207,38 @@ a = Vector2(7, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_84slv"]
 radius = 336.0952
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_nxi8k"]
+radius = 156.01282
+
 [node name="Bomb" type="RigidBody2D" unique_id=621203618]
-position = Vector2(34, 14)
 mass = 0.03
+freeze_mode = 1
 script = SubResource("GDScript_vpdcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791282722]
-position = Vector2(34.000004, -33)
+position = Vector2(-5.9999924, -23)
 scale = Vector2(1.3173801, 1.3520209)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
 animation = &"Bomb"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
-position = Vector2(42, -9.999999)
+position = Vector2(1, 7.6293945e-06)
 rotation = -3.3215415
 scale = Vector2(0.8898788, 0.90651864)
 shape = SubResource("CircleShape2D_j15uc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1580063140]
-position = Vector2(40, -76)
+position = Vector2(0, -66)
 shape = SubResource("SegmentShape2D_84slv")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=328594888]
-position = Vector2(62, -94)
+position = Vector2(22.000008, -84.00001)
 rotation = -1.7563028
 shape = SubResource("SegmentShape2D_nxi8k")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=789565334]
-position = Vector2(79, -93)
+position = Vector2(39.000004, -83)
 shape = SubResource("SegmentShape2D_1hf1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=239060379]
@@ -240,14 +248,24 @@ wait_time = 1.7999999999999998
 wait_time = 0.5
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1399334668]
+position = Vector2(-40, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=343007850]
 position = Vector2(39, 20)
 shape = SubResource("CircleShape2D_84slv")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1647867780]
+position = Vector2(-40, 10)
 stream = ExtResource("4_84slv")
+
+[node name="Bomb Pickup" type="Area2D" parent="." unique_id=1680680018]
+position = Vector2(-40, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb Pickup" unique_id=356614884]
+position = Vector2(43, -11)
+shape = SubResource("CircleShape2D_nxi8k")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Bomb Pickup" to="." method="_on_bomb_pickup_body_entered"]

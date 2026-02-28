@@ -10,6 +10,10 @@ var mine_dir: Vector2i = Vector2i.DOWN
 
 var playerNumber = "1"
 
+var heldBomb: Node = null
+
+var lastDirectionMoved = 1
+
 func _ready() -> void:
 	if isPlayer2:
 		playerNumber = "2"
@@ -27,8 +31,10 @@ func _physics_process(delta: float) -> void:
 	# Update direction (held is fine just to "aim")
 	if Input.is_action_pressed(playerNumber + "move_left"):
 		mine_dir = Vector2i.LEFT
+		lastDirectionMoved = -1
 	elif Input.is_action_pressed(playerNumber + "move_right"):
 		mine_dir = Vector2i.RIGHT
+		lastDirectionMoved = 1
 	elif Input.is_action_pressed(playerNumber + "move_up"):
 		mine_dir = Vector2i.UP
 	elif Input.is_action_pressed(playerNumber + "move_down"):
@@ -41,6 +47,25 @@ func _physics_process(delta: float) -> void:
 	or Input.is_action_just_pressed(playerNumber + "move_down"):
 		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir)
 
+	if Input.is_action_just_pressed("ui_accept") and heldBomb and heldBomb.bombIsThrown == false:
+		heldBomb.reparent(get_parent())
+		heldBomb.get_node("CollisionShape2D").disabled = false
+		heldBomb.freeze = false
+		heldBomb.throw(lastDirectionMoved)
+		heldBomb = null
+
 	if Global.playerDead1:
 		Global.playerDead1 = false
 	move_and_slide()
+
+func pickupBomb(bomb):
+	if heldBomb == null:
+		heldBomb = bomb
+	else:
+		return false
+	bomb.set_deferred("freeze", true)
+	bomb.get_node("CollisionShape2D").set_deferred("disabled", true)
+	bomb.call_deferred("reparent", self)
+	bomb.set_deferred("rotation", 0)
+	bomb.set_deferred("position", Vector2(0, -112))
+	return true
