@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ewy8k0q47pt0" path="res://scripts/main.gd" id="1_glv2v"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="2_r0du0"]
-[ext_resource type="Texture2D" uid="uid://wocs83k2tyss" path="res://Assets/play.svg" id="3_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="3_rarhs"]
+[ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="4_rarhs"]
 
 [sub_resource type="Theme" id="Theme_fos0i"]
 
@@ -12,7 +13,118 @@ font_size = 80
 
 [sub_resource type="Theme" id="Theme_lgr22"]
 default_font = ExtResource("2_r0du0")
-default_font_size = 34
+default_font_size = 28
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(0, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxi8k"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(666, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hf1o"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(1332, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56fam"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(0, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lqhf"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(666, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nxw5"]
+atlas = ExtResource("3_rarhs")
+region = Rect2(1332, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcsgt"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c01mt"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxtc6"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlsqs"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8u5g"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhr70"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp0k4"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjd11"]
+atlas = ExtResource("4_rarhs")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmy6f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84slv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxi8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hf1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56fam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lqhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nxw5")
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcsgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c01mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxtc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlsqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8u5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhr70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp0k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjd11")
+}],
+"loop": false,
+"name": &"Fuse",
+"speed": 12.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1159390000]
 script = ExtResource("1_glv2v")
@@ -29,17 +141,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="play" type="Button" parent="." unique_id=1572279383]
-offset_left = 444.0
-offset_top = 314.0
-offset_right = 675.0
-offset_bottom = 429.0
-rotation = -0.097866535
+offset_left = 521.0
+offset_top = 270.0
+offset_right = 649.0
+offset_bottom = 398.0
 theme = SubResource("Theme_lgr22")
-text = "Play"
-icon = ExtResource("3_cm0pq")
 flat = true
 icon_alignment = 1
-expand_icon = true
+
+[node name="bomb" type="AnimatedSprite2D" parent="play" unique_id=299588345]
+position = Vector2(64, 64)
+scale = Vector2(1.0000001, 1.0000001)
+sprite_frames = SubResource("SpriteFrames_qmy6f")
+animation = &"Fuse"
+
+[node name="Label" type="Label" parent="play" unique_id=1690771222]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 73.0
+offset_right = 94.0
+offset_bottom = 101.0
+text = "Play"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1062611866]
 position = Vector2(576, 324)
