@@ -33,4 +33,6 @@ func _physics_process(delta: float) -> void:
 	or Input.is_action_just_pressed("1move_down"):
 		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir)
 
+	if Global.playerDead1:
+		Global.playerDead1 = false
 	move_and_slide()
