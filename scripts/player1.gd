@@ -43,10 +43,10 @@ func _physics_process(delta: float) -> void:
 		mine_dir = Vector2i.DOWN
 
 	# Spam-only: mine only on JUST PRESSED (one hit per press)
-	if Input.is_action_just_pressed(playerNumber + "move_left") \
+	if (Input.is_action_just_pressed(playerNumber + "move_left") \
 	or Input.is_action_just_pressed(playerNumber + "move_right") \
 	or Input.is_action_just_pressed(playerNumber + "move_up") \
-	or Input.is_action_just_pressed(playerNumber + "move_down"):
+	or Input.is_action_just_pressed(playerNumber + "move_down")) and heldBomb == null:
 		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir)
 
 	if Input.is_action_just_pressed("ui_accept") and heldBomb and heldBomb.bombIsThrown == false:
