@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 		if isPlayer2:
 			$playersprite.play("running")
 		else:
-			$playersprite.play("running")
+			$playersprite.play("running2")
 	elif input_dir == 1:
 		$playersprite.play("player1_right" if !isPlayer2 else "player2_right")
 	elif input_dir == -1:
