@@ -22,12 +22,12 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == \"player\":
-		Global.p1points += 20 
+		Global.changePlayerScore(\"player\", 20)
 		audio_stream_player.play()
 		area_2d.queue_free()
 		# Replace with function body.
 	if body.name == \"player2\":
-		Global.p2points += 20
+		Global.changePlayerScore(\"player2\", 20)
 		audio_stream_player.play()
 		area_2d.queue_free()
 "
@@ -143,5 +143,6 @@ frame_progress = 0.711833
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1114333727]
 stream = ExtResource("2_i64fm")
+volume_db = 14.14
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
