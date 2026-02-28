@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_force
 
 	# Update direction (held is fine just to "aim")
+	lastDirectionMoved = 0.2 * sign(lastDirectionMoved)
+
 	if Input.is_action_pressed(playerNumber + "move_left"):
 		mine_dir = Vector2i.LEFT
 		lastDirectionMoved = -1
@@ -52,7 +54,9 @@ func _physics_process(delta: float) -> void:
 		heldBomb.get_node("CollisionShape2D").disabled = false
 		heldBomb.freeze = false
 		heldBomb.throw(lastDirectionMoved)
-		heldBomb = null
+
+		get_tree().create_timer(0.3).connect("timeout", func ():
+			heldBomb = null)
 
 	if Global.playerDead1:
 		Global.playerDead1 = false
