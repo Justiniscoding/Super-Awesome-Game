@@ -406,6 +406,7 @@ sources/2 = SubResource("TileSetAtlasSource_p57ef")
 [node name="Game" type="Node2D" unique_id=843341578]
 
 [node name="player2" type="CharacterBody2D" parent="." unique_id=1743147397]
+modulate = Color(0.8460365, 0, 0.13476738, 1)
 z_index = 10
 position = Vector2(259, 0)
 script = ExtResource("1_yqjtg")
