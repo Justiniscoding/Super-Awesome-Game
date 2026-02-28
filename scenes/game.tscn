@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
+[gd_scene format=4 uid="uid://tot24nb2v34x"]
 
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -404,6 +404,28 @@ sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 sources/2 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="Game" type="Node2D" unique_id=843341578]
+
+[node name="player2" type="CharacterBody2D" parent="." unique_id=1743147397]
+z_index = 10
+position = Vector2(259, 0)
+script = ExtResource("1_yqjtg")
+isPlayer2 = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2" unique_id=312472554]
+shape = SubResource("RectangleShape2D_80nbo")
+
+[node name="playersprite" type="AnimatedSprite2D" parent="player2" unique_id=1868923897]
+sprite_frames = SubResource("SpriteFrames_e2o6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="player2" unique_id=2117635107]
+position = Vector2(2, 31)
+rotation = 0.34906584
+scale = Vector2(0.359375, 1)
+texture = ExtResource("2_lnu2h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player2" unique_id=1110109806]
+libraries/ = SubResource("AnimationLibrary_gee14")
+speed_scale = 3.0
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
 z_index = 10
