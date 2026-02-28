@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://p8be0unrwxxm" path="res://Assets/miner2right.png" id="8_rysoc"]
 [ext_resource type="AudioStream" uid="uid://ttk4qclwosdy" path="res://Assets/main theme.wav" id="9_0tnpc"]
 [ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://de3t7gc04ldba" path="res://scenes/coin.tscn" id="15_ir15t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(91, 151.5)
@@ -671,14 +672,86 @@ theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "asdf"
 
-[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/GUI" unique_id=1415861225]
-position = Vector2(28, 113)
-texture = ExtResource("4_gee14")
-hframes = 2
-vframes = 2
+[node name="Area2D" parent="." unique_id=1227597671 instance=ExtResource("15_ir15t")]
+position = Vector2(-3441, 2727)
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/GUI" unique_id=1395471428]
-position = Vector2(28, 22)
-texture = ExtResource("4_gee14")
-hframes = 2
-vframes = 2
+[node name="Area2D2" parent="." unique_id=1077518385 instance=ExtResource("15_ir15t")]
+position = Vector2(-3937, 2619)
+
+[node name="Area2D3" parent="." unique_id=1640999718 instance=ExtResource("15_ir15t")]
+position = Vector2(-2500, 3013)
+
+[node name="Area2D4" parent="." unique_id=1975551035 instance=ExtResource("15_ir15t")]
+position = Vector2(-2139, 1603)
+
+[node name="Area2D5" parent="." unique_id=406309149 instance=ExtResource("15_ir15t")]
+position = Vector2(-980, 1739)
+
+[node name="Area2D6" parent="." unique_id=1388475806 instance=ExtResource("15_ir15t")]
+position = Vector2(377, 1352)
+
+[node name="Area2D7" parent="." unique_id=913967038 instance=ExtResource("15_ir15t")]
+position = Vector2(2938, 1777)
+
+[node name="Area2D8" parent="." unique_id=775492010 instance=ExtResource("15_ir15t")]
+position = Vector2(4155, 1487)
+
+[node name="Area2D9" parent="." unique_id=1848099210 instance=ExtResource("15_ir15t")]
+position = Vector2(4681, 1087)
+
+[node name="Area2D10" parent="." unique_id=503758969 instance=ExtResource("15_ir15t")]
+position = Vector2(4909, 1012)
+
+[node name="Area2D11" parent="." unique_id=1868997901 instance=ExtResource("15_ir15t")]
+position = Vector2(1005, 3117)
+
+[node name="Area2D12" parent="." unique_id=1345086084 instance=ExtResource("15_ir15t")]
+position = Vector2(1455, 3270)
+
+[node name="Area2D13" parent="." unique_id=1392800922 instance=ExtResource("15_ir15t")]
+position = Vector2(2070, 3417)
+
+[node name="Area2D14" parent="." unique_id=2009799606 instance=ExtResource("15_ir15t")]
+position = Vector2(3417, 3664)
+
+[node name="Bomb7" parent="." unique_id=621203618 instance=ExtResource("5_iywne")]
+position = Vector2(2100, 3295)
+
+[node name="Bomb8" parent="." unique_id=1851496220 instance=ExtResource("5_iywne")]
+position = Vector2(4156, 3448)
+
+[node name="Bomb9" parent="." unique_id=2013141724 instance=ExtResource("5_iywne")]
+position = Vector2(-3241, 2695)
+
+[node name="Bomb10" parent="." unique_id=109180031 instance=ExtResource("5_iywne")]
+position = Vector2(-3873, 6755)
+
+[node name="Bomb11" parent="." unique_id=149525376 instance=ExtResource("5_iywne")]
+position = Vector2(-2407, 6990)
+
+[node name="Bomb12" parent="." unique_id=419369098 instance=ExtResource("5_iywne")]
+position = Vector2(209, 6873)
+
+[node name="Bomb13" parent="." unique_id=1266499498 instance=ExtResource("5_iywne")]
+position = Vector2(1936, 6348)
+
+[node name="Bomb14" parent="." unique_id=2010252384 instance=ExtResource("5_iywne")]
+position = Vector2(2973, 6698)
+
+[node name="Bomb15" parent="." unique_id=756968974 instance=ExtResource("5_iywne")]
+position = Vector2(4417, 6497)
+
+[node name="Area2D15" parent="." unique_id=1298150519 instance=ExtResource("15_ir15t")]
+position = Vector2(2507, 6741)
+
+[node name="Area2D16" parent="." unique_id=882142477 instance=ExtResource("15_ir15t")]
+position = Vector2(3570, 6729)
+
+[node name="Area2D17" parent="." unique_id=1776742084 instance=ExtResource("15_ir15t")]
+position = Vector2(3950, 6628)
+
+[node name="Area2D18" parent="." unique_id=2114340907 instance=ExtResource("15_ir15t")]
+position = Vector2(5003, 6493)
+
+[node name="Area2D19" parent="." unique_id=1862007705 instance=ExtResource("15_ir15t")]
+position = Vector2(5328, 6344)
