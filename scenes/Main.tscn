@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://lvicak5iy8j8"]
 
 [ext_resource type="Script" uid="uid://ewy8k0q47pt0" path="res://scripts/main.gd" id="1_glv2v"]
-[ext_resource type="Texture2D" uid="uid://i8ntacpldrvb" path="res://Assets/bg.png" id="2_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="2_jlsqs"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="2_r0du0"]
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="3_rarhs"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="4_rarhs"]
 [ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="5_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://40qg5x6dfhoy" path="res://Assets/world_tileset.png" id="6_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://e65oj6544s7d" path="res://Assets/world_tileset.png" id="6_jlsqs"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="7_q8u5g"]
 
 [sub_resource type="Theme" id="Theme_fos0i"]
@@ -481,8 +481,9 @@ animations = [{
 [node name="Node2D" type="Node2D" unique_id=1159390000]
 script = ExtResource("1_glv2v")
 
-[node name="bg" type="Sprite2D" parent="." unique_id=777578894]
-position = Vector2(576, 324)
+[node name="bg2" type="Sprite2D" parent="." unique_id=1802756347]
+position = Vector2(575.7953, 325.00336)
+scale = Vector2(1.5977912, 1.5502231)
 texture = ExtResource("2_jlsqs")
 
 [node name="super awesome digging bomb game" type="Label" parent="." unique_id=600829136]

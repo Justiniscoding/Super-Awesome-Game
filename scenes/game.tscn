@@ -1,6 +1,6 @@
-[gd_scene format=4 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
 
-[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_ir15t"]
+[ext_resource type="Script" uid="uid://burb50iydwxu3" path="res://scripts/camera_2d.gd" id="1_ir15t"]
 [ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_vtaks"]
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -19,7 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c30vvtnhqnqb4" path="res://Assets/idle2.png" id="10_ca42v"]
 [ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://b0msqjd2rvvt7" path="res://Assets/miner2bombright.png" id="11_bt5mj"]
-[ext_resource type="PackedScene" path="res://scenes/coin.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://de3t7gc04ldba" path="res://scenes/coin.tscn" id="15_ir15t"]
+[ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="16_rysoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(91, 151.5)
@@ -719,6 +720,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 sources/2 = SubResource("TileSetAtlasSource_0tnpc")
 
+[sub_resource type="Theme" id="Theme_ssvqc"]
+default_font = ExtResource("16_rysoc")
+
 [node name="Game" type="Node2D" unique_id=843341578]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=69517666 node_paths=PackedStringArray("player1", "player2")]
@@ -810,21 +814,27 @@ layout_mode = 0
 offset_left = 60.0
 offset_right = 100.0
 offset_bottom = 69.0
+theme = SubResource("Theme_ssvqc")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="P2 Score" type="Label" parent="CanvasLayer/GUI" unique_id=1084117760]
+[node name="P2 Score" type="Label" parent="CanvasLayer/GUI" unique_id=284164066]
 layout_mode = 0
 offset_left = 60.0
-offset_top = 100.0
-offset_right = 168.0
-offset_bottom = 169.0
+offset_top = 64.0
+offset_right = 100.0
+offset_bottom = 133.0
+theme = SubResource("Theme_ssvqc")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Timer" type="Label" parent="CanvasLayer/GUI" unique_id=1746636989]
 layout_mode = 0
