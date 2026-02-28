@@ -4,8 +4,8 @@ var blockMiningProgress := 0.0
 var blockPosition: Vector2i = Vector2i.ZERO
 
 var miningTimes := {
-	Vector2i(0, 0): 0.5,
-	Vector2i(0, 1): 0.7
+	Vector2i(0, 0): 0.25,
+	Vector2i(0, 1): 0.4
 }
 
 func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i) -> void:
