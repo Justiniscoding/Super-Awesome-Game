@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cnq0q1lop72us" path="res://Assets/New Piskel (3).png" id="4_gee14"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://40qg5x6dfhoy" path="res://Assets/world_tileset.png" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://jwuqikk3hpyt" path="res://Assets/New Piskel (6).png" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="5_iywne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
@@ -23,6 +24,18 @@ region = Rect2(256, 0, 256, 256)
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
 atlas = ExtResource("4_gee14")
 region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
+atlas = ExtResource("5_0tnpc")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
+atlas = ExtResource("5_0tnpc")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
+atlas = ExtResource("5_0tnpc")
+region = Rect2(0, 512, 256, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e2o6t"]
 animations = [{
@@ -46,6 +59,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trtic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dinhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvuet")
+}],
+"loop": true,
+"name": &"running",
 "speed": 5.0
 }]
 
@@ -474,11 +501,12 @@ shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
 position = Vector2(4.7683716e-07, -56)
+position = Vector2(67, -156)
 scale = Vector2(2.2421875, 2.5019531)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
-animation = &"new_animation"
-autoplay = "new_animation"
-frame_progress = 0.89777696
+animation = &"running"
+autoplay = "running"
+frame_progress = 0.7284316
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=69517666]
 position = Vector2(1, 85)
