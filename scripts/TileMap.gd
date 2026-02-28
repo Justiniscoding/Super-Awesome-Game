@@ -32,7 +32,7 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i) -> voi
 	# Crack / break using your atlas-coord logic
 	if blockType.x % 2 == 0:
 		if blockMiningProgress > miningTimes.get(blockType, 999999.0):
-			blockMiningProgress = 0.0
+			blockMiningProgress = 0. 
 			set_cell(tilemapCellPosition, 2, blockType + Vector2i(1, 0))
 	else:
 		var baseType := blockType - Vector2i(1, 0)

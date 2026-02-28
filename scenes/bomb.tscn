@@ -59,6 +59,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	animated_sprite_2d.play(\"Explosion\")
 	audio_stream_player_2d.play()
+	z_index = 999
 	collision_shape_2d.disabled = false
 	exploding = true
 	timer_2.start()
