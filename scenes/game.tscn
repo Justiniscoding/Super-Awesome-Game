@@ -37,19 +37,19 @@ region = Rect2(0, 256, 256, 256)
 atlas = ExtResource("4_gee14")
 region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_js0lu"]
-atlas = ExtResource("10_ca42v")
-region = Rect2(0, 256, 256, 256)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxtfn"]
 atlas = ExtResource("6_1kice")
-region = Rect2(256, 0, 256, 256)
+region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_twgab"]
 atlas = ExtResource("6_1kice")
-region = Rect2(0, 256, 256, 256)
+region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02fa5"]
+atlas = ExtResource("6_1kice")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ni1"]
 atlas = ExtResource("6_1kice")
 region = Rect2(256, 256, 256, 256)
 
@@ -169,6 +169,10 @@ region = Rect2(256, 256, 256, 256)
 atlas = ExtResource("10_ca42v")
 region = Rect2(0, 0, 256, 256)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_js0lu"]
+atlas = ExtResource("10_ca42v")
+region = Rect2(0, 256, 256, 256)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rm0al"]
 atlas = ExtResource("4_gee14")
 region = Rect2(0, 0, 256, 256)
@@ -212,9 +216,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_js0lu")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_gxtfn")
 }, {
 "duration": 1.0,
@@ -222,6 +223,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_02fa5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ni1")
 }],
 "loop": true,
 "name": &"player1_bombl",
@@ -763,14 +767,14 @@ z_index = 10
 script = ExtResource("1_yqjtg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=60088318]
-position = Vector2(2.5, -11.5)
+position = Vector2(2.5, -55.5)
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
-position = Vector2(5, -66)
+position = Vector2(5, -110)
 scale = Vector2(2.242, 2.24)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
-animation = &"running2"
+animation = &"player1_bombl"
 autoplay = "new_animation"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1490103036]
@@ -778,6 +782,9 @@ tile_map_data = PackedByteArray("AAAAAAQAAgAAAAAAAAABAAQAAgAAAAAAAAACAAQAAgAAAAA
 tile_set = SubResource("TileSet_iywne")
 navigation_enabled = false
 script = ExtResource("4_lbhrr")
+
+[node name="Bomb25" parent="." unique_id=621203618 instance=ExtResource("5_iywne")]
+position = Vector2(543, 304)
 
 [node name="Bomb" parent="." unique_id=1797611392 instance=ExtResource("5_iywne")]
 position = Vector2(-1594, 1718)
@@ -901,7 +908,7 @@ position = Vector2(2070, 3417)
 [node name="Area2D14" parent="." unique_id=2009799606 instance=ExtResource("15_ir15t")]
 position = Vector2(3417, 3664)
 
-[node name="Bomb7" parent="." unique_id=621203618 instance=ExtResource("5_iywne")]
+[node name="Bomb7" parent="." unique_id=364912921 instance=ExtResource("5_iywne")]
 position = Vector2(2100, 3295)
 
 [node name="Bomb8" parent="." unique_id=1851496220 instance=ExtResource("5_iywne")]

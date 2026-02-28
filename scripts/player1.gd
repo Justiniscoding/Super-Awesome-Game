@@ -43,9 +43,15 @@ func _physics_process(delta: float) -> void:
 		else:
 			$playersprite.play("running2")
 	elif input_dir == 1:
-		$playersprite.play("player1_right" if !isPlayer2 else "player2_right")
+		if heldBomb == null:
+			$playersprite.play("player1_right" if !isPlayer2 else "player2_right")
+		else:
+			$playersprite.play("player1_bombr" if !isPlayer2 else "player2_bombr")
 	elif input_dir == -1:
-		$playersprite.play("player1_left" if !isPlayer2 else "player2_left")
+		if heldBomb == null:
+			$playersprite.play("player1_left" if !isPlayer2 else "player2_left")
+		else:
+			$playersprite.play("player1_bombl" if !isPlayer2 else "player2_bombl")
 
 	if Input.is_action_just_pressed(playerNumber + "move_up") and (is_on_floor() or is_on_wall()):
 		velocity.y = jump_force
