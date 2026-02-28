@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var isPlayer2 = false
+@onready var audio_stream_player: AudioStreamPlayer = $"../player/AudioStreamPlayer"
 
 @export var speed: float = 500.0
 @export var gravity: float = 2500.0
@@ -60,15 +61,20 @@ func _physics_process(delta: float) -> void:
 	lastDirectionMoved = 0.4 * sign(lastDirectionMoved)
 
 	if Input.is_action_pressed(playerNumber + "move_left"):
+		audio_stream_player.play()
 		mine_dir = Vector2i.LEFT
 		lastDirectionMoved = -1
 	elif Input.is_action_pressed(playerNumber + "move_right"):
 		mine_dir = Vector2i.RIGHT
+		audio_stream_player.play()
 		lastDirectionMoved = 1
 	elif Input.is_action_pressed(playerNumber + "move_up"):
 		mine_dir = Vector2i.UP
+		audio_stream_player.play()
 	elif Input.is_action_pressed(playerNumber + "move_down"):
 		mine_dir = Vector2i.DOWN
+		audio_stream_player.play()
+
 		
 	if isBeingLaunched and is_on_floor() and !shouldLaunch:
 		isBeingLaunched = false
