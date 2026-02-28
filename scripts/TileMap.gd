@@ -7,7 +7,8 @@ var blockPosition2: Vector2i = Vector2i.ZERO
 
 var miningTimes := {
 	Vector2i(0, 0): 0.25,
-	Vector2i(0, 1): 0.4
+	Vector2i(0, 1): 0.4,
+	Vector2i(4, 1): 0.7
 }
 
 func _ready() -> void:
