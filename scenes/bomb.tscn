@@ -69,6 +69,7 @@ func _on_timer_2_timeout() -> void:
 	animated_sprite_2d.stop()
 	animated_sprite_2d.hide()
 	collision_shape_2d.disabled = true
+	Global.emit_signal(\"bombExploded\", position)
 	bomb.queue_free()
 	 # Replace with function body.
 "

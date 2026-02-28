@@ -8,6 +8,9 @@ var miningTimes := {
 	Vector2i(0, 1): 0.4
 }
 
+func _ready() -> void:
+	Global.connect("bombExploded", bombExploded)
+
 func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i) -> void:
 	# Use tile size (so we don't mine the "second block" by accident)
 	var tile_h: int = tile_set.tile_size.y
@@ -39,3 +42,13 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i) -> voi
 		if blockMiningProgress > miningTimes.get(baseType, 999999.0):
 			blockMiningProgress = 0.0
 			erase_cell(tilemapCellPosition)
+
+func bombExploded(bombPosition) -> void:
+	print("the bomb has exlpoded")
+	print("it was at ")
+	print(bombPosition)
+	var tilemapCellPosition = local_to_map(bombPosition)
+	print(tilemapCellPosition)
+	for i in range(tilemapCellPosition.x - 5, tilemapCellPosition.x + 5):
+		for j in range(tilemapCellPosition.y - 5, tilemapCellPosition.y + 5):
+			erase_cell(Vector2i(i, j))
