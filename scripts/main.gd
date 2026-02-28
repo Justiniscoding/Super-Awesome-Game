@@ -31,7 +31,7 @@ func explode() -> void:
 	bomb.scale = Vector2.ONE
 
 	var tween = create_tween()
-	tween.tween_property(bomb, "scale", Vector2(8, 8), 0.6)
+	tween.tween_property(bomb, "scale", Vector2(18, 18), 0.8)
 	await tween.finished
 
 	await exploding.finished

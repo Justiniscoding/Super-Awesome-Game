@@ -9,6 +9,7 @@ extends CharacterBody2D
 var mine_dir: Vector2i = Vector2i.DOWN
 
 var playerNumber = "1"
+var bombCooldown = 0
 
 var heldBomb: Node = null
 
@@ -19,6 +20,8 @@ func _ready() -> void:
 		playerNumber = "2"
 
 func _physics_process(delta: float) -> void:
+	if bombCooldown >= 0:
+		bombCooldown -= delta
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -49,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	or Input.is_action_just_pressed(playerNumber + "move_down")) and heldBomb == null:
 		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir)
 
-	if Input.is_action_just_pressed(playerNumber + "move_down") and heldBomb and heldBomb.bombIsThrown == false:
+	if Input.is_action_just_pressed(playerNumber + "move_down") and heldBomb and heldBomb.bombIsThrown == false and bombCooldown <= 0:
 		heldBomb.reparent(get_parent())
 		heldBomb.get_node("CollisionShape2D").disabled = false
 		heldBomb.freeze = false
@@ -65,6 +68,7 @@ func _physics_process(delta: float) -> void:
 func pickupBomb(bomb):
 	if heldBomb == null:
 		heldBomb = bomb
+		bombCooldown = 0.05
 	else:
 		return false
 	bomb.set_deferred("freeze", true)

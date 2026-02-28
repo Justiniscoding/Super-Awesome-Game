@@ -513,9 +513,9 @@ script = ExtResource("7_q8u5g")
 
 [node name="play" type="Button" parent="." unique_id=1572279383]
 offset_left = 521.0
-offset_top = 270.0
+offset_top = 381.0
 offset_right = 649.0
-offset_bottom = 398.0
+offset_bottom = 509.0
 theme = SubResource("Theme_lgr22")
 flat = true
 icon_alignment = 1
