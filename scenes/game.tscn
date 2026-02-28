@@ -783,9 +783,6 @@ tile_set = SubResource("TileSet_iywne")
 navigation_enabled = false
 script = ExtResource("4_lbhrr")
 
-[node name="Bomb25" parent="." unique_id=621203618 instance=ExtResource("5_iywne")]
-position = Vector2(543, 304)
-
 [node name="Bomb" parent="." unique_id=1797611392 instance=ExtResource("5_iywne")]
 position = Vector2(-1594, 1718)
 

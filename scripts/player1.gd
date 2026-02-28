@@ -112,5 +112,4 @@ func launch(bombPosition):
 	velocityToLaunch = Vector2(-cos(angle), 1)
 	isBeingLaunched = true
 	shouldLaunch = true
-	print("Lauynch was called and I am ", playerNumber)
 	Global.emit_signal("getPoints", "2" if isPlayer2 else "1", -5)
