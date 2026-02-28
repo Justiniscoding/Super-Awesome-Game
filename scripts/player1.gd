@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
-@export var gravity: float = 900.0
-@export var jump_force: float = -500.0
+@export var speed: float = 500.0
+@export var gravity: float = 2500.0
+@export var jump_force: float = -1250.0
 
 var mine_dir: Vector2i = Vector2i.DOWN
 

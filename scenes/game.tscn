@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
 
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -406,6 +406,7 @@ sources/2 = SubResource("TileSetAtlasSource_p57ef")
 [node name="Game" type="Node2D" unique_id=843341578]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
+z_index = 10
 script = ExtResource("1_yqjtg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=60088318]
