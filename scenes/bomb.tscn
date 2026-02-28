@@ -211,7 +211,7 @@ script = SubResource("GDScript_vpdcx")
 position = Vector2(34.000004, -33)
 scale = Vector2(1.3173801, 1.3520209)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
-animation = &"Explosion"
+animation = &"Bomb"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
