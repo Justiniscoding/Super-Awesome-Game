@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bblwmya0qo8gj"]
+
+[ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="1_n6e4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6e4x"]
+size = Vector2(695, 20)
+
+[node name="Node2D" type="Node2D" unique_id=949690331]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1311621316]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1268616749]
+position = Vector2(337.5, 0)
+shape = SubResource("RectangleShape2D_n6e4x")
+
+[node name="Bomb" parent="." unique_id=621203618 instance=ExtResource("1_n6e4x")]
+position = Vector2(251, -68)
