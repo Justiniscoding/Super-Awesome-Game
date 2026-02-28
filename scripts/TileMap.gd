@@ -25,8 +25,9 @@ func mineBlock(playerPosition, timeMining):
 	if blockType.x % 2 == 0:
 		if blockMiningProgress > miningTimes[blockType]:
 			blockMiningProgress = 0
-			print(blockType)
-			print(blockType + Vector2i(1, 0))
-			set_cell(tilemapCellPosition, 0, blockType + Vector2i(1, 0))
-			# erase_cell(tilemapCellPosition)
+			set_cell(tilemapCellPosition, 2, blockType + Vector2i(1, 0))
+	else:
+		if blockMiningProgress > miningTimes[blockType - Vector2i(1, 0)]:
+			blockMiningProgress = 0
+			erase_cell(tilemapCellPosition)
 	

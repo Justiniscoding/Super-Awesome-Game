@@ -150,6 +150,7 @@ flat = true
 icon_alignment = 1
 
 [node name="bomb" type="AnimatedSprite2D" parent="play" unique_id=299588345]
+texture_filter = 1
 position = Vector2(64, 64)
 scale = Vector2(1.0000001, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_qmy6f")
