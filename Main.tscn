@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://lvicak5iy8j8"]
+
+[ext_resource type="Script" uid="uid://ewy8k0q47pt0" path="res://main.gd" id="1_glv2v"]
+
+[node name="Node2D" type="Node2D" unique_id=1159390000]
+script = ExtResource("1_glv2v")
+
+[node name="Label" type="Label" parent="." unique_id=600829136]
+offset_left = 469.0
+offset_top = 39.0
+offset_right = 643.0
+offset_bottom = 62.0
+text = "Super Awesome Game"
+
+[node name="Button" type="Button" parent="." unique_id=1572279383]
+offset_left = 444.0
+offset_top = 314.0
+offset_right = 675.0
+offset_bottom = 429.0
+rotation = -0.097866535
+text = "Play"
