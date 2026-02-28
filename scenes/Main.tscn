@@ -157,9 +157,7 @@ texture_filter = 1
 position = Vector2(64, 64)
 scale = Vector2(1.0000001, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_qmy6f")
-animation = &"Explosion"
-frame = 5
-frame_progress = 1.0
+animation = &"Fuse"
 
 [node name="Label" type="Label" parent="play" unique_id=1690771222]
 layout_mode = 0
