@@ -3,10 +3,10 @@ extends CharacterBody2D
 @export var tilemap: PackedScene
 
 @export var speed: float = 350.0
-@export var gravity: float = 900.0
-@export var jump_force: float = -650.0
+@export var gravity: float = 2500.0
+@export var jump_force: float = -900.0
 
-var restartPosition = Vector2(250, 500)
+var restartPosition = Vector2(250, 250)
 
 func _physics_process(delta: float) -> void:
 	# gravity
@@ -27,4 +27,5 @@ func _physics_process(delta: float) -> void:
 		
 	if Global.playerDead1:
 		position = restartPosition
+		Global.playerDead1 = false
 	move_and_slide()
