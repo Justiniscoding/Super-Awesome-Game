@@ -8,15 +8,15 @@
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://jwuqikk3hpyt" path="res://Assets/New Piskel (6).png" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://boy31oxmxiedo" path="res://Assets/miner1left.png" id="5_trtic"]
+[ext_resource type="Texture2D" uid="uid://diin4gw0l32hi" path="res://Assets/miner1right.png" id="6_ir15t"]
+[ext_resource type="Texture2D" uid="uid://4u807sso7a87" path="res://Assets/miner2left.png" id="7_ca42v"]
+[ext_resource type="Texture2D" uid="uid://p8be0unrwxxm" path="res://Assets/miner2right.png" id="8_rysoc"]
 [ext_resource type="AudioStream" uid="uid://ttk4qclwosdy" path="res://Assets/main theme.wav" id="9_0tnpc"]
 [ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(91, 197)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
-atlas = ExtResource("4_gee14")
-region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vtaks"]
 atlas = ExtResource("4_gee14")
@@ -25,6 +25,74 @@ region = Rect2(256, 0, 256, 256)
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvpfn"]
 atlas = ExtResource("4_gee14")
 region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tnpc"]
+atlas = ExtResource("4_gee14")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
+atlas = ExtResource("5_trtic")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
+atlas = ExtResource("5_trtic")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
+atlas = ExtResource("5_trtic")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
+atlas = ExtResource("5_trtic")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
+atlas = ExtResource("6_ir15t")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
+atlas = ExtResource("6_ir15t")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1j6l"]
+atlas = ExtResource("6_ir15t")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl11u"]
+atlas = ExtResource("6_ir15t")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhx41"]
+atlas = ExtResource("7_ca42v")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnb83"]
+atlas = ExtResource("7_ca42v")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
+atlas = ExtResource("7_ca42v")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suyxu"]
+atlas = ExtResource("7_ca42v")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]
+atlas = ExtResource("8_rysoc")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qouja"]
+atlas = ExtResource("8_rysoc")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wljb1"]
+atlas = ExtResource("8_rysoc")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2yb1"]
+atlas = ExtResource("8_rysoc")
+region = Rect2(256, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
 atlas = ExtResource("5_0tnpc")
@@ -50,16 +118,84 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0tnpc")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_vtaks")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kvpfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tnpc")
 }],
 "loop": true,
 "name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssvqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_264po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kice")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5newe")
+}],
+"loop": true,
+"name": &"player1_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37s47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt5mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1j6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl11u")
+}],
+"loop": true,
+"name": &"player1_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhx41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnb83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sww3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suyxu")
+}],
+"loop": true,
+"name": &"player2_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgl2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qouja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wljb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2yb1")
+}],
+"loop": true,
+"name": &"player2_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -436,7 +572,6 @@ position = Vector2(576, 324)
 texture = ExtResource("1_u5sy4")
 
 [node name="player2" type="CharacterBody2D" parent="." unique_id=1743147397]
-modulate = Color(0.8460365, 0, 0.13476738, 1)
 z_index = 10
 position = Vector2(-541, -80)
 script = ExtResource("1_yqjtg")
@@ -446,7 +581,9 @@ isPlayer2 = true
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player2" unique_id=1868923897]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
+animation = &"player2_left"
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
 z_index = 10
@@ -521,3 +658,13 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 50
 text = "Player 2 score"
+
+[node name="Timer" type="Label" parent="CanvasLayer/GUI" unique_id=1746636989]
+layout_mode = 0
+offset_left = 576.0
+offset_top = -8.0
+offset_right = 1152.0
+offset_bottom = 61.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
