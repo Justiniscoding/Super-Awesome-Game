@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://tot24nb2v34x"]
 
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="4_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(128, 128)
@@ -17,16 +19,105 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
-size = Vector2(0.99983996, 1.000771)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_e2o6t"]
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
 normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_feb5d"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+texture = ExtResource("3_lnu2h")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+8:1/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:3/0 = 0
+7:3/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+2:4/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+0:8/0 = 0
+0:9/0 = 0
+1:7/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+2:5/0 = 0
+1:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+2:8/0 = 0
+2:7/0 = 0
+3:6/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+3:7/0 = 0
+3:8/0 = 0
+3:9/0 = 0
+4:8/0 = 0
+4:7/0 = 0
+4:6/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+5:7/0 = 0
+5:8/0 = 0
+5:9/0 = 0
+4:9/0 = 0
+0:4/0 = 0
+6:5/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+6:8/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+7:8/0 = 0
+7:7/0 = 0
+7:6/0 = 0
+7:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iywne"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [node name="Game" type="Node2D" unique_id=843341578]
 
@@ -44,18 +135,6 @@ shape = SubResource("RectangleShape2D_80nbo")
 position = Vector2(364, 385)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
 
-[node name="floor" type="CharacterBody2D" parent="." unique_id=958504534]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=596863702]
-position = Vector2(575.59375, 587.9375)
-scale = Vector2(1171, 162.00002)
-shape = SubResource("RectangleShape2D_feb5d")
-
-[node name="Sprite2D" type="Sprite2D" parent="floor" unique_id=40474836]
-position = Vector2(575.50006, 588)
-scale = Vector2(1171, 162.00002)
-texture = SubResource("CanvasTexture_e2o6t")
-
 [node name="wallleft" type="CharacterBody2D" parent="." unique_id=244854227]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wallleft" unique_id=1035569045]
@@ -66,3 +145,10 @@ shape = SubResource("WorldBoundaryShape2D_e2o6t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wallright" unique_id=1596799071]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_feb5d")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1490103036]
+scale = Vector2(0.3, 0.3)
+tile_map_data = PackedByteArray("AAAAABAAAAAAAAAAAAABABAAAAAAAAAAAAACABAAAAAAAAAAAAADABAAAAAAAAAAAAAEABAAAAAAAAAAAAAFABAAAAAAAAAAAAAGABAAAAAAAAAAAAAHABAAAAAAAAAAAAAIABAAAAAAAAAAAAAJABAAAAAAAAAAAAAKABAAAAAAAAAAAAALABAAAAAAAAAAAAAMABAAAAAAAAAAAAANABAAAAAAAAAAAAAOABAAAAAAAAAAAAAPABAAAAAAAAAAAAAQABAAAAAAAAAAAAARABAAAAAAAAAAAAASABAAAAAAAAAAAAATABAAAAAAAAAAAAAUABAAAAAAAAAAAAAVABAAAAAAAAAAAAAWABAAAAAAAAAAAAAXABAAAAAAAAAAAAAYABAAAAAAAAAAAAAZABAAAAAAAAAAAAAaABAAAAAAAAAAAAAbABAAAAAAAAAAAAAcABAAAAAAAAAAAAAdABAAAAAAAAAAAAAAAA8AAAAHAAQAAAABAA8AAAAHAAQAAAACAA8AAAAHAAQAAAADAA8AAAAHAAQAAAAEAA8AAAAHAAQAAAAFAA8AAAAHAAQAAAAGAA8AAAAHAAQAAAAHAA8AAAAHAAQAAAAIAA8AAAAHAAQAAAAJAA8AAAAHAAQAAAAKAA8AAAAHAAQAAAALAA8AAAAHAAQAAAAMAA8AAAAHAAQAAAANAA8AAAAHAAQAAAAOAA8AAAAHAAQAAAAPAA8AAAAHAAQAAAAQAA8AAAAHAAQAAAARAA8AAAAHAAQAAAASAA8AAAAHAAQAAAATAA8AAAAHAAQAAAAUAA8AAAAHAAQAAAAVAA8AAAAHAAQAAAAWAA8AAAAHAAQAAAAXAA8AAAAHAAQAAAAYAA8AAAAHAAQAAAAZAA8AAAAHAAQAAAAaAA8AAAAHAAQAAAAbAA8AAAAHAAQAAAAcAA8AAAAHAAQAAAAdAA8AAAAHAAQAAAAeAA8AAAAHAAQAAAA=")
+tile_set = SubResource("TileSet_iywne")
+navigation_enabled = false
+script = ExtResource("4_lbhrr")
