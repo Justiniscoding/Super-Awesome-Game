@@ -3,6 +3,7 @@ extends Node2D
 @onready var play_button = $play
 @onready var label = $play/Label
 @onready var bomb = $play/bomb
+@onready var exploding = $exploder
 
 func _ready() -> void:
 	play_button.pressed.connect(_on_play_pressed)
@@ -20,11 +21,13 @@ func _on_play_pressed() -> void:
 
 
 func explode() -> void:
+	exploding.play()
 	bomb.play("Explosion")
 	bomb.scale = Vector2.ONE
 
-	var target_scale = Vector2(10, 10)
-
 	var tween = create_tween()
-	tween.tween_property(bomb, "scale", target_scale, 0.6)
+	tween.tween_property(bomb, "scale", Vector2(10, 10), 0.6)
 	await tween.finished
+
+	await exploding.finished
+	
