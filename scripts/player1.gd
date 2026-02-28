@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = jump_force
 
 	# Update direction (held is fine just to "aim")
-	lastDirectionMoved = 0.2 * sign(lastDirectionMoved)
+	lastDirectionMoved = 0.4 * sign(lastDirectionMoved)
 
 	if Input.is_action_pressed(playerNumber + "move_left"):
 		mine_dir = Vector2i.LEFT
@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 		heldBomb.reparent(get_parent())
 		heldBomb.get_node("CollisionShape2D").disabled = false
 		heldBomb.freeze = false
-		heldBomb.throw(lastDirectionMoved)
+		heldBomb.throw(Vector2(lastDirectionMoved, 1))
 
 		get_tree().create_timer(0.3).connect("timeout", func ():
 			heldBomb = null)

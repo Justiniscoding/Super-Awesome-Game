@@ -10,8 +10,6 @@ script/source = "extends RigidBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var bomb: RigidBody2D = $\".\"
 var bombIsThrown = false
-@onready var timer: Timer = $Timer
-@onready var timer_2: Timer = $Timer2
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 var exploding = false
 var throwVelocity = Vector2(15, -25)
@@ -23,6 +21,9 @@ var isPickedUp = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	collision_shape_2d.disabled = true
+	animated_sprite_2d.stop()
+	$AnimatedSprite2D.connect(\"animation_finished\", changeAnimation)
+	Global.connect(\"bombExploded\", otherBombExploded)
  # Replace with function body.
 
 
@@ -36,17 +37,33 @@ func _process(delta: float) -> void:
 				isPickedUp = body.pickupBomb(self)
 				break
 
+func otherBombExploded(otherPosition):
+	if otherPosition != position and bombIsThrown == false:
+		if (otherPosition - position).length() < 250:
+			throw(Vector2(0,0))
+
 func throw(playerDirection):
-		apply_central_impulse(throwVelocity * Vector2(playerDirection, 1))
+		apply_central_impulse(throwVelocity * playerDirection)
 		animated_sprite_2d.play(\"Fuse\")
 		bombIsThrown = true
-		timer.start()
 	
 
 func explode() -> void:
 	animated_sprite_2d.play(\"Explosion\")
 	
-
+func changeAnimation() -> void:
+	if animated_sprite_2d.animation == \"Fuse\":
+		animated_sprite_2d.play(\"Explosion\")
+		audio_stream_player_2d.play()
+		z_index = 999
+		collision_shape_2d.disabled = false
+		exploding = true
+	else:
+		Global.emit_signal(\"bombExploded\", position)
+		animated_sprite_2d.stop()
+		animated_sprite_2d.hide()
+		collision_shape_2d.disabled = true
+		bomb.queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.name == \"player\"):
@@ -54,24 +71,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		print(\"dead player\") # Replace with function body.
 	else: if(body.name == \"player2\"):
 		Global.player2Dead()
-
-
-func _on_timer_timeout() -> void:
-	animated_sprite_2d.play(\"Explosion\")
-	audio_stream_player_2d.play()
-	z_index = 999
-	collision_shape_2d.disabled = false
-	exploding = true
-	timer_2.start()
-
-
-func _on_timer_2_timeout() -> void:
-	animated_sprite_2d.stop()
-	animated_sprite_2d.hide()
-	collision_shape_2d.disabled = true
-	Global.emit_signal(\"bombExploded\", position)
-	bomb.queue_free()
-	 # Replace with function body.
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
@@ -188,7 +187,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k4r2f")
 }],
-"loop": true,
+"loop": false,
 "name": &"Fuse",
 "speed": 4.45
 }]
@@ -243,12 +242,6 @@ shape = SubResource("SegmentShape2D_nxi8k")
 position = Vector2(39.000004, -83)
 shape = SubResource("SegmentShape2D_1hf1o")
 
-[node name="Timer" type="Timer" parent="." unique_id=239060379]
-wait_time = 1.7999999999999998
-
-[node name="Timer2" type="Timer" parent="." unique_id=1026356175]
-wait_time = 0.5
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1399334668]
 position = Vector2(-40, 10)
 
@@ -267,7 +260,5 @@ position = Vector2(-40, 10)
 position = Vector2(43, -11)
 shape = SubResource("CircleShape2D_nxi8k")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Bomb Pickup" to="." method="_on_bomb_pickup_body_entered"]
