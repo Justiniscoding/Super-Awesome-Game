@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
 
 [ext_resource type="Texture2D" uid="uid://i8ntacpldrvb" path="res://Assets/bg.png" id="1_u5sy4"]
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cnq0q1lop72us" path="res://Assets/New Piskel (3).png" id="4_gee14"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="4_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://40qg5x6dfhoy" path="res://Assets/world_tileset.png" id="4_p57ef"]
 [ext_resource type="Texture2D" uid="uid://jwuqikk3hpyt" path="res://Assets/New Piskel (6).png" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="5_iywne"]
 
@@ -204,8 +203,11 @@ texture_region_size = Vector2i(128, 128)
 7:5/0 = 0
 7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gee14"]
+load_path = "res://.godot/imported/world_tileset.png-aac1170b2f3c785c1a10006f5d535e73.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
-texture = ExtResource("4_p57ef")
+texture = SubResource("CompressedTexture2D_gee14")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
@@ -500,7 +502,6 @@ position = Vector2(2.5, -11.5)
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
-position = Vector2(4.7683716e-07, -56)
 position = Vector2(67, -156)
 scale = Vector2(2.2421875, 2.5019531)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
