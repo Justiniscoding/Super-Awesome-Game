@@ -1,7 +1,9 @@
 extends TileMapLayer
 
-var blockMiningProgress := 0.0
-var blockPosition: Vector2i = Vector2i.ZERO
+var blockMiningProgress1 := 0.0
+var blockMiningProgress2 := 0.0
+var blockPosition1: Vector2i = Vector2i.ZERO
+var blockPosition2: Vector2i = Vector2i.ZERO
 
 var miningTimes := {
 	Vector2i(0, 0): 0.25,
@@ -22,30 +24,59 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i, player
 	var tilemapCellPosition: Vector2i = feet_cell + dir
 
 	# Reset progress when switching blocks
-	if tilemapCellPosition != blockPosition and tilemapCellPosition != blockPosition + Vector2i(0, -128):
-		blockMiningProgress = 0.0
-		blockPosition = tilemapCellPosition
+	if playerNumber == "2":
+		if tilemapCellPosition != blockPosition2 and tilemapCellPosition != blockPosition2 + Vector2i(0, -128):
+			blockMiningProgress2 = 0.0
+			blockPosition2 = tilemapCellPosition
+	else:
+		if tilemapCellPosition != blockPosition1 and tilemapCellPosition != blockPosition1 + Vector2i(0, -128):
+			blockMiningProgress1 = 0.0
+			blockPosition1 = tilemapCellPosition
 
-	blockMiningProgress += timeMining
 
-	var blockType: Vector2i = get_cell_atlas_coords(blockPosition)
+	if playerNumber == "2":
+		blockMiningProgress2 += timeMining
+	else:
+		blockMiningProgress1 += timeMining
+
+	var blockType: Vector2i
+	if playerNumber == "2":
+		blockType = get_cell_atlas_coords(blockPosition2)
+	else:
+		blockType = get_cell_atlas_coords(blockPosition1)
+
+
 	if blockType == Vector2i(-1, -1):
-		blockType = get_cell_atlas_coords(blockPosition + Vector2i(0, -1))
+		if playerNumber == "2":
+			blockType = get_cell_atlas_coords(blockPosition2 + Vector2i(0, -1))
+		else:
+			blockType = get_cell_atlas_coords(blockPosition1 + Vector2i(0, -1))
 		tilemapCellPosition += Vector2i(0, -1)
 		if blockType == Vector2i(-1, -1):
 			return
 
 	# Crack / break using your atlas-coord logic
 	if blockType.x % 2 == 0:
-		if blockMiningProgress > miningTimes.get(blockType, 999999.0):
-			blockMiningProgress = 0. 
-			set_cell(tilemapCellPosition, 2, blockType + Vector2i(1, 0))
+		if playerNumber == "2":
+			if blockMiningProgress2 > miningTimes.get(blockType, 999999.0):
+				blockMiningProgress2 = 0. 
+				set_cell(tilemapCellPosition, 2, blockType + Vector2i(1, 0))
+		else:
+			if blockMiningProgress1 > miningTimes.get(blockType, 999999.0):
+				blockMiningProgress1 = 0. 
+				set_cell(tilemapCellPosition, 2, blockType + Vector2i(1, 0))
 	else:
 		var baseType := blockType - Vector2i(1, 0)
-		if blockMiningProgress > miningTimes.get(baseType, 999999.0):
-			blockMiningProgress = 0.0
-			erase_cell(tilemapCellPosition)
-			Global.emit_signal("getPoints", playerNumber, blockPosition.y / 10 + 1)
+		if playerNumber == "2":
+			if blockMiningProgress2 > miningTimes.get(baseType, 999999.0):
+				blockMiningProgress2 = 0.0
+				erase_cell(tilemapCellPosition)
+				Global.emit_signal("getPoints", playerNumber, blockPosition2.y / 10 + 1)
+		else:
+			if blockMiningProgress1 > miningTimes.get(baseType, 999999.0):
+				blockMiningProgress1 = 0.0
+				erase_cell(tilemapCellPosition)
+				Global.emit_signal("getPoints", playerNumber, blockPosition1.y / 10 + 1)
 
 
 func bombExploded(bombPosition, playerWhoThrew) -> void:
