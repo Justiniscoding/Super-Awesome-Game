@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
 
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -195,6 +195,7 @@ sprite_frames = SubResource("SpriteFrames_e2o6t")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=69517666]
 position = Vector2(1, 85)
+zoom = Vector2(0.5, 0.5)
 
 [node name="wallleft" type="CharacterBody2D" parent="." unique_id=244854227]
 

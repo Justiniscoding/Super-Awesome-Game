@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 @export var tilemap: PackedScene
 
-@export var speed: float = 200.0
+@export var speed: float = 350.0
 @export var gravity: float = 900.0
-@export var jump_force: float = -500.0
+@export var jump_force: float = -650.0
 
 var restartPosition = Vector2(250, 500)
 
