@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://lvicak5iy8j8"]
+
+[ext_resource type="Script" uid="uid://ewy8k0q47pt0" path="res://main.gd" id="1_glv2v"]
+[ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://assets/dreamplanner.otf" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://wocs83k2tyss" path="res://assets/play.svg" id="3_cm0pq"]
+
+[sub_resource type="Theme" id="Theme_fos0i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3dxm6"]
+font = ExtResource("2_rarhs")
+font_size = 80
+
+[sub_resource type="Theme" id="Theme_lgr22"]
+default_font = ExtResource("2_rarhs")
+default_font_size = 34
+
+[node name="Node2D" type="Node2D" unique_id=1159390000]
+script = ExtResource("1_0bbpv")
+
+[node name="super awesome digging bomb game" type="Label" parent="." unique_id=600829136]
+offset_left = 48.0
+offset_top = 92.0
+offset_right = 1063.0
+offset_bottom = 169.0
+theme = SubResource("Theme_fos0i")
+text = "Super Awesome Digging Bomb Game"
+label_settings = SubResource("LabelSettings_3dxm6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play" type="Button" parent="." unique_id=1572279383]
+offset_left = 444.0
+offset_top = 314.0
+offset_right = 675.0
+offset_bottom = 429.0
+rotation = -0.097866535
+theme = SubResource("Theme_lgr22")
+text = "Play"
+icon = ExtResource("3_cm0pq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1062611866]
+position = Vector2(576, 324)
