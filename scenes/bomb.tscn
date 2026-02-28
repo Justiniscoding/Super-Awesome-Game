@@ -144,7 +144,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Explosion",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -173,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Fuse",
-"speed": 7.0
+"speed": 4.45
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j15uc"]
@@ -200,7 +200,7 @@ script = SubResource("GDScript_vpdcx")
 position = Vector2(34.000004, -33.000004)
 scale = Vector2(0.69200164, 0.6848455)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
-animation = &"Explosion"
+animation = &"Fuse"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
@@ -222,9 +222,9 @@ position = Vector2(57, -69)
 shape = SubResource("SegmentShape2D_1hf1o")
 
 [node name="Timer" type="Timer" parent="." unique_id=239060379]
+wait_time = 1.7999999999999998
 
 [node name="Timer2" type="Timer" parent="." unique_id=1026356175]
-wait_time = 0.5
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1399334668]
 
