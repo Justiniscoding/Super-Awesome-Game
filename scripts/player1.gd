@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_axis("1move_left", "1move_right")
 	velocity.x = input_dir * speed
 
-	if Input.is_action_just_pressed("1move_up") and is_on_floor():
+	if Input.is_action_just_pressed("1move_up") and (is_on_floor() or is_on_wall()):
 		velocity.y = jump_force
 
 	# Update direction (held is fine just to "aim")
