@@ -1,4 +1,5 @@
 extends Node2D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @onready var play_button = $play
 @onready var label = $play/Label
@@ -18,6 +19,7 @@ func _on_play_pressed() -> void:
 	label.text = ""
 
 	bomb.play("Fuse")
+	audio_stream_player.play()
 	await bomb.animation_finished
 
 	await explode()

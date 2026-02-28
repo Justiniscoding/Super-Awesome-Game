@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="3_rarhs"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="4_rarhs"]
 [ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="5_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://40qg5x6dfhoy" path="res://Assets/world_tileset.png" id="6_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://df0se7mgi8cvi" path="res://Assets/world_tileset.png" id="6_jlsqs"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="7_q8u5g"]
+[ext_resource type="AudioStream" uid="uid://dvek5jlvntda1" path="res://Assets/freesound_community-fuse-80913.mp3" id="9_q8u5g"]
 
 [sub_resource type="Theme" id="Theme_fos0i"]
 
@@ -535,3 +536,7 @@ offset_top = 73.0
 offset_right = 94.0
 offset_bottom = 101.0
 text = "Play"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1702360468]
+stream = ExtResource("9_q8u5g")
+volume_db = 2.737
