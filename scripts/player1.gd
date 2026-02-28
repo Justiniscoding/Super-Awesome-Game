@@ -7,6 +7,8 @@ extends CharacterBody2D
 @export var jump_force: float = -1250.0
 
 var launchVelocity = -1800
+var velocityToLaunch = Vector2.ZERO
+var isBeingLaunched = false
 
 var mine_dir: Vector2i = Vector2i.DOWN
 
@@ -30,7 +32,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 
 	var input_dir := Input.get_axis(playerNumber + "move_left", playerNumber + "move_right")
-	velocity.x = input_dir * speed
+	if !isBeingLaunched or input_dir != 0:
+		velocity.x = input_dir * speed
+	else:
+		velocity.x = lerp(velocity.x, 0.0, 0.025)
 
 	if Input.is_action_just_pressed(playerNumber + "move_up") and (is_on_floor() or is_on_wall()):
 		velocity.y = jump_force
@@ -48,6 +53,9 @@ func _physics_process(delta: float) -> void:
 		mine_dir = Vector2i.UP
 	elif Input.is_action_pressed(playerNumber + "move_down"):
 		mine_dir = Vector2i.DOWN
+		
+	if isBeingLaunched and is_on_floor() and !shouldLaunch:
+		isBeingLaunched = false
 
 	# Spam-only: mine only on JUST PRESSED (one hit per press)
 	if (Input.is_action_just_pressed(playerNumber + "move_left") \
@@ -70,7 +78,7 @@ func _physics_process(delta: float) -> void:
 		
 	if shouldLaunch:
 		shouldLaunch = false
-		velocity.y = launchVelocity
+		velocity = velocityToLaunch * launchVelocity
 	move_and_slide()
 
 func pickupBomb(bomb):
@@ -86,5 +94,8 @@ func pickupBomb(bomb):
 	bomb.set_deferred("position", Vector2(0, -162))
 	return true
 
-func launch():
+func launch(bombPosition):
+	var angle = atan2(position.y - bombPosition.y, position.x - bombPosition.x)
+	velocityToLaunch = Vector2(-cos(angle), 1)
+	isBeingLaunched = true
 	shouldLaunch = true
