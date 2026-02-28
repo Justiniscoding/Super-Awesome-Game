@@ -7,6 +7,9 @@
 script/source = "extends Area2D
 @onready var area_2d: Area2D = $\".\"
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var timer: Timer = $Timer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,12 +27,20 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == \"player\":
 		Global.changePlayerScore(\"1\", 20)
 		audio_stream_player.play()
-		area_2d.queue_free()
+		collision_shape_2d.disabled = true
+		animated_sprite_2d.hide()
+		timer.start()
 		# Replace with function body.
 	if body.name == \"player2\":
 		Global.changePlayerScore(\"2\", 20)
 		audio_stream_player.play()
-		area_2d.queue_free()
+		collision_shape_2d.disabled = true
+		animated_sprite_2d.hide()
+		timer.start()
+
+
+func _on_timer_timeout() -> void:
+	area_2d.queue_free() # Replace with function body.
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i64fm"]
@@ -145,4 +156,8 @@ frame_progress = 0.711833
 stream = ExtResource("2_i64fm")
 volume_db = 14.14
 
+[node name="Timer" type="Timer" parent="." unique_id=831304719]
+wait_time = 0.2
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

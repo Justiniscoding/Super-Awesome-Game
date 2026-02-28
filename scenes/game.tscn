@@ -17,9 +17,10 @@
 [ext_resource type="AudioStream" uid="uid://ttk4qclwosdy" path="res://Assets/main theme.wav" id="9_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://bei8j4c6sby51" path="res://Assets/miner2bombleft.png" id="10_37s47"]
 [ext_resource type="Texture2D" uid="uid://c30vvtnhqnqb4" path="res://Assets/idle2.png" id="10_ca42v"]
+[ext_resource type="Texture2D" uid="uid://c30vvtnhqnqb4" path="res://Assets/idle2.png" id="10_ca42v"]
 [ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://b0msqjd2rvvt7" path="res://Assets/miner2bombright.png" id="11_bt5mj"]
-[ext_resource type="PackedScene" uid="uid://de3t7gc04ldba" path="res://scenes/coin.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://de3t7gc04ldba" uid="uid://de3t7gc04ldba" path="res://scenes/coin.tscn" id="15_ir15t"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="16_rysoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
@@ -38,6 +39,8 @@ atlas = ExtResource("4_gee14")
 region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_js0lu"]
+atlas = ExtResource("10_ca42v")
+region = Rect2(0, 256, 256, 256)
 atlas = ExtResource("10_ca42v")
 region = Rect2(0, 256, 256, 256)
 
@@ -799,6 +802,7 @@ position = Vector2(1823, 63)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=679531260]
 stream = ExtResource("9_0tnpc")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1140417561]
 
@@ -950,3 +954,30 @@ position = Vector2(-1269, 7364)
 
 [node name="Area2D22" parent="." unique_id=526635606 instance=ExtResource("15_ir15t")]
 position = Vector2(-324, 7112)
+
+[node name="Bomb16" parent="." unique_id=1502871908 instance=ExtResource("5_iywne")]
+position = Vector2(4235, 1333)
+
+[node name="Bomb17" parent="." unique_id=49729013 instance=ExtResource("5_iywne")]
+position = Vector2(4955, 954)
+
+[node name="Bomb18" parent="." unique_id=1069441521 instance=ExtResource("5_iywne")]
+position = Vector2(-945, 1653)
+
+[node name="Bomb19" parent="." unique_id=360026817 instance=ExtResource("5_iywne")]
+position = Vector2(-2251, 1404)
+
+[node name="Bomb20" parent="." unique_id=146844024 instance=ExtResource("5_iywne")]
+position = Vector2(-3880, 2529)
+
+[node name="Bomb21" parent="." unique_id=1423197430 instance=ExtResource("5_iywne")]
+position = Vector2(-2654, 2811)
+
+[node name="Bomb22" parent="." unique_id=1621555589 instance=ExtResource("5_iywne")]
+position = Vector2(1093, 2988)
+
+[node name="Bomb23" parent="." unique_id=862787874 instance=ExtResource("5_iywne")]
+position = Vector2(2801, 3250)
+
+[node name="Bomb24" parent="." unique_id=160932752 instance=ExtResource("5_iywne")]
+position = Vector2(-1088, 7215)
