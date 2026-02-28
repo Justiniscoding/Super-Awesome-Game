@@ -417,7 +417,7 @@ sprite_frames = SubResource("SpriteFrames_e2o6t")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=69517666]
 position = Vector2(1, 85)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.3, 0.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=775935082]
 position = Vector2(2, 31)
