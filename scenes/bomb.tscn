@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://ccyr3cdtm3rop"]
+
+[ext_resource type="Texture2D" uid="uid://cx1xlb2e2rq4q" path="res://Assets/New Piskel (1).png" id="1_vpdcx"]
+[ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="2_j15uc"]
+
+[sub_resource type="GDScript" id="GDScript_vpdcx"]
+script/source = "extends RigidBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(0, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxi8k"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(666, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hf1o"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(1332, 0, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56fam"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(0, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lqhf"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(666, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nxw5"]
+atlas = ExtResource("2_j15uc")
+region = Rect2(1332, 777, 666, 777)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3s2y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vpdcx")
+}],
+"loop": true,
+"name": &"Bomb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84slv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxi8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hf1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56fam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lqhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nxw5")
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nocn"]
+radius = 189.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j15uc"]
+radius = 23.086792
+
+[node name="Bomb" type="RigidBody2D" unique_id=621203618]
+script = SubResource("GDScript_vpdcx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791282722]
+position = Vector2(33.56349, -33.937508)
+scale = Vector2(0.69200164, 0.6848455)
+sprite_frames = SubResource("SpriteFrames_m3s2y")
+animation = &"Explosion"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
+position = Vector2(28, -6)
+shape = SubResource("CircleShape2D_3nocn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=267873145]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=458787610]
+position = Vector2(7, 12)
+shape = SubResource("CircleShape2D_j15uc")
