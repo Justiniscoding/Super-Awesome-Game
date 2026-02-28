@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cx1xlb2e2rq4q" path="res://Assets/New Piskel (1).png" id="1_vpdcx"]
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="2_j15uc"]
+[ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
 
 [sub_resource type="GDScript" id="GDScript_vpdcx"]
 script/source = "extends RigidBody2D
+@onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,7 +17,20 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	collision_shape_2d.disabled = true
+	
+
+func explode() -> void:
+	animated_sprite_2d.play(\"Explosion\")
+	collision_shape_2d.disabled = false
+	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if(body.name == \"player1\"):
+		Global.player1Dead() # Replace with function body.
+	else: if(body.name == \"player2\"):
+		Global.player2Dead()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84slv"]
@@ -40,6 +56,38 @@ region = Rect2(666, 777, 666, 777)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nxw5"]
 atlas = ExtResource("2_j15uc")
 region = Rect2(1332, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3s2y"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nocn"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poanl"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gab1"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdkyb"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk3su"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4r2f"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3swkl"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m3s2y"]
 animations = [{
@@ -73,6 +121,35 @@ animations = [{
 "loop": false,
 "name": &"Explosion",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3s2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nocn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poanl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gab1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdkyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk3su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4r2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3swkl")
+}],
+"loop": true,
+"name": &"Fuse",
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nocn"]
@@ -89,13 +166,16 @@ position = Vector2(33.56349, -33.937508)
 scale = Vector2(0.69200164, 0.6848455)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
 animation = &"Explosion"
+autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
-position = Vector2(28, -6)
+position = Vector2(20, 12)
 shape = SubResource("CircleShape2D_3nocn")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=267873145]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=458787610]
-position = Vector2(7, 12)
+position = Vector2(38, -22)
 shape = SubResource("CircleShape2D_j15uc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
