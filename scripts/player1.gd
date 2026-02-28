@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 	or Input.is_action_just_pressed(playerNumber + "move_right") \
 	or Input.is_action_just_pressed(playerNumber + "move_up") \
 	or Input.is_action_just_pressed(playerNumber + "move_down")) and heldBomb == null:
-		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir)
+		get_parent().get_node("TileMapLayer").mineBlock(global_position, 0.1, mine_dir, playerNumber)
 
 	if Input.is_action_just_pressed(playerNumber + "move_down") and heldBomb and heldBomb.bombIsThrown == false and bombCooldown <= 0:
 		heldBomb.reparent(get_parent())
@@ -73,9 +73,6 @@ func _physics_process(delta: float) -> void:
 		get_tree().create_timer(0.3).connect("timeout", func ():
 			heldBomb = null)
 
-	if Global.playerDead1:
-		Global.playerDead1 = false
-		
 	if shouldLaunch:
 		shouldLaunch = false
 		velocity = velocityToLaunch * launchVelocity
@@ -86,13 +83,13 @@ func pickupBomb(bomb):
 		heldBomb = bomb
 		bombCooldown = 0.05
 	else:
-		return false
+		return "0"
 	bomb.set_deferred("freeze", true)
 	bomb.get_node("CollisionShape2D").set_deferred("disabled", true)
 	bomb.call_deferred("reparent", self)
 	bomb.set_deferred("rotation", 0)
 	bomb.set_deferred("position", Vector2(0, -162))
-	return true
+	return playerNumber
 
 func launch(bombPosition):
 	var angle = atan2(position.y - bombPosition.y, position.x - bombPosition.x)

@@ -1,23 +1,20 @@
 extends Node
 
-signal bombExploded(bombPosition)
+signal bombExploded(bombPosition, player)
 signal getPoints(player, amount)
+signal scoresChanged
 
 var p1points = 0
 var p2points = 0
 
-var playerDead1 = false
+func changePlayerScore(player, amount):
+	if player == "2":
+		p2points += amount
+		emit_signal("scoresChanged")
+		return
+	p1points += amount
+	emit_signal("scoresChanged")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func player1Dead() -> void:
-	playerDead1 = true
-	
-func player2Dead() -> void:
-	pass
+	connect("getPoints", changePlayerScore)

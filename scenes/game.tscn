@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://jwuqikk3hpyt" path="res://Assets/New Piskel (6).png" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="5_iywne"]
 [ext_resource type="AudioStream" uid="uid://ttk4qclwosdy" path="res://Assets/main theme.wav" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(91, 197)
@@ -492,4 +493,31 @@ position = Vector2(1823, 63)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=679531260]
 stream = ExtResource("9_0tnpc")
-autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1140417561]
+
+[node name="GUI" type="Control" parent="CanvasLayer" unique_id=1045315132]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_vtaks")
+
+[node name="P1 Score" type="Label" parent="CanvasLayer/GUI" unique_id=829173743]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Player 1 score"
+
+[node name="P2 Score" type="Label" parent="CanvasLayer/GUI" unique_id=1084117760]
+layout_mode = 0
+offset_left = 720.0
+offset_right = 828.0
+offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Player 2 score"

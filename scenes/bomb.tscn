@@ -16,7 +16,7 @@ var exploding = false
 var throwVelocity = Vector2(15, -25)
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
-var isPickedUp = false
+var isPickedUp = \"0\"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,15 +32,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if exploding:
 		animated_sprite_2d.rotation = -1 * bomb.rotation
-	if $\"Bomb Pickup\".has_overlapping_bodies() and not isPickedUp:
+	if $\"Bomb Pickup\".has_overlapping_bodies() and isPickedUp == \"0\":
 		for body in $\"Bomb Pickup\".get_overlapping_bodies():
 			if body.name.begins_with(\"player\"):
 				isPickedUp = body.pickupBomb(self)
 				break
 
-func otherBombExploded(otherPosition):
+func otherBombExploded(otherPosition, playerNumber):
 	if otherPosition != position and bombIsThrown == false:
 		if (otherPosition - position).length() < 336:
+			isPickedUp = playerNumber
 			throw(Vector2(0,0))
 
 func throw(playerDirection):
@@ -61,7 +62,7 @@ func changeAnimation() -> void:
 		exploding = true
 		$GPUParticles2D.emitting = true
 	else:
-		Global.emit_signal(\"bombExploded\", position)
+		Global.emit_signal(\"bombExploded\", position, isPickedUp)
 		animated_sprite_2d.stop()
 		animated_sprite_2d.hide()
 		collision_shape_2d.disabled = true
