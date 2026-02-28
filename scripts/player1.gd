@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var tilemap: PackedScene
+
 @export var speed: float = 200.0
 @export var gravity: float = 900.0
 @export var jump_force: float = -400.0
@@ -16,5 +18,10 @@ func _physics_process(delta: float) -> void:
 	# jumpy
 	if Input.is_action_just_pressed("1move_up") and is_on_floor():
 		velocity.y = jump_force
+
+	# mine
+	if is_on_floor() and Input.is_action_pressed("1move_down"):
+		get_parent().get_node("TileMapLayer").mineBlock(position, delta)
+		
 	
 	move_and_slide()

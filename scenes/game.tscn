@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ccyr3cdtm3rop" path="res://scenes/bomb.tscn" id="3_lnu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
-size = Vector2(128, 128)
+size = Vector2(110, 110)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e2o6t"]
 animations = [{
@@ -70,6 +70,7 @@ texture_region_size = Vector2i(128, 128)
 5:4/0 = 0
 6:4/0 = 0
 7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 8:4/0 = 0
 2:4/0 = 0
 1:4/0 = 0
@@ -114,6 +115,7 @@ texture_region_size = Vector2i(128, 128)
 7:7/0 = 0
 7:6/0 = 0
 7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSet" id="TileSet_iywne"]
 tile_size = Vector2i(128, 128)
@@ -122,19 +124,18 @@ sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [node name="Game" type="Node2D" unique_id=843341578]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=69517666]
-position = Vector2(576, 324)
-
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
 script = ExtResource("1_yqjtg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=60088318]
-position = Vector2(364, 385)
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
-position = Vector2(364, 385)
+scale = Vector2(0.859, 0.859)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=69517666]
+position = Vector2(1, 85)
 
 [node name="wallleft" type="CharacterBody2D" parent="." unique_id=244854227]
 
@@ -148,11 +149,11 @@ position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_feb5d")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1490103036]
-scale = Vector2(0.3, 0.3)
-tile_map_data = PackedByteArray("AAAAABAAAAAAAAAAAAABABAAAAAAAAAAAAACABAAAAAAAAAAAAADABAAAAAAAAAAAAAEABAAAAAAAAAAAAAFABAAAAAAAAAAAAAGABAAAAAAAAAAAAAHABAAAAAAAAAAAAAIABAAAAAAAAAAAAAJABAAAAAAAAAAAAAKABAAAAAAAAAAAAALABAAAAAAAAAAAAAMABAAAAAAAAAAAAANABAAAAAAAAAAAAAOABAAAAAAAAAAAAAPABAAAAAAAAAAAAAQABAAAAAAAAAAAAARABAAAAAAAAAAAAASABAAAAAAAAAAAAATABAAAAAAAAAAAAAUABAAAAAAAAAAAAAVABAAAAAAAAAAAAAWABAAAAAAAAAAAAAXABAAAAAAAAAAAAAYABAAAAAAAAAAAAAZABAAAAAAAAAAAAAaABAAAAAAAAAAAAAbABAAAAAAAAAAAAAcABAAAAAAAAAAAAAdABAAAAAAAAAAAAAAAA8AAAAHAAQAAAABAA8AAAAHAAQAAAACAA8AAAAHAAQAAAADAA8AAAAHAAQAAAAEAA8AAAAHAAQAAAAFAA8AAAAHAAQAAAAGAA8AAAAHAAQAAAAHAA8AAAAHAAQAAAAIAA8AAAAHAAQAAAAJAA8AAAAHAAQAAAAKAA8AAAAHAAQAAAALAA8AAAAHAAQAAAAMAA8AAAAHAAQAAAANAA8AAAAHAAQAAAAOAA8AAAAHAAQAAAAPAA8AAAAHAAQAAAAQAA8AAAAHAAQAAAARAA8AAAAHAAQAAAASAA8AAAAHAAQAAAATAA8AAAAHAAQAAAAUAA8AAAAHAAQAAAAVAA8AAAAHAAQAAAAWAA8AAAAHAAQAAAAXAA8AAAAHAAQAAAAYAA8AAAAHAAQAAAAZAA8AAAAHAAQAAAAaAA8AAAAHAAQAAAAbAA8AAAAHAAQAAAAcAA8AAAAHAAQAAAAdAA8AAAAHAAQAAAAeAA8AAAAHAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAAAQAAAAHAAQAAAABAAQAAAAHAAQAAAACAAQAAAAHAAQAAAADAAQAAAAHAAQAAAAEAAQAAAAHAAQAAAAFAAQAAAAHAAQAAAAGAAQAAAAHAAQAAAAHAAQAAAAHAAQAAAAIAAQAAAAHAAQAAAAAAAUAAAAHAAUAAAABAAUAAAAHAAUAAAACAAUAAAAHAAUAAAADAAUAAAAHAAUAAAAEAAUAAAAHAAUAAAAFAAUAAAAHAAUAAAAGAAUAAAAHAAUAAAAHAAUAAAAHAAUAAAAIAAUAAAAHAAUAAAAIAAYAAAAHAAUAAAAHAAYAAAAHAAUAAAAGAAYAAAAHAAUAAAAFAAYAAAAHAAUAAAAEAAYAAAAHAAUAAAADAAYAAAAHAAUAAAACAAYAAAAHAAUAAAABAAYAAAAHAAUAAAAAAAYAAAAHAAUAAAA=")
 tile_set = SubResource("TileSet_iywne")
 navigation_enabled = false
 script = ExtResource("4_lbhrr")
 
 [node name="Bomb" parent="." unique_id=621203618 instance=ExtResource("3_lnu2h")]
 position = Vector2(767, 420)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TileMapLayer" unique_id=1816345404]
