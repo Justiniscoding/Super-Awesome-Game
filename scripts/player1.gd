@@ -71,5 +71,5 @@ func pickupBomb(bomb):
 	bomb.get_node("CollisionShape2D").set_deferred("disabled", true)
 	bomb.call_deferred("reparent", self)
 	bomb.set_deferred("rotation", 0)
-	bomb.set_deferred("position", Vector2(0, -112))
+	bomb.set_deferred("position", Vector2(0, -162))
 	return true
