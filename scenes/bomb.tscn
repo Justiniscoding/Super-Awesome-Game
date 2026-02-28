@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cx1xlb2e2rq4q" path="res://Assets/New Piskel (1).png" id="1_vpdcx"]
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="2_j15uc"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
+[ext_resource type="Texture2D" uid="uid://dbx2rwtimkpao" path="res://Assets/New Piskel (2).png" id="3_j15uc"]
 
 [sub_resource type="GDScript" id="GDScript_vpdcx"]
 script/source = "extends RigidBody2D
@@ -56,6 +57,38 @@ region = Rect2(666, 777, 666, 777)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7nxw5"]
 atlas = ExtResource("2_j15uc")
 region = Rect2(1332, 777, 666, 777)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j15uc"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3s2y"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nocn"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poanl"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gab1"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdkyb"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk3su"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4r2f"]
+atlas = ExtResource("3_j15uc")
+region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3s2y"]
 atlas = ExtResource("3_j15uc")
@@ -150,6 +183,35 @@ animations = [{
 "loop": true,
 "name": &"Fuse",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j15uc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3s2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nocn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poanl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gab1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdkyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk3su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4r2f")
+}],
+"loop": true,
+"name": &"Fuse",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3nocn"]
@@ -162,14 +224,15 @@ radius = 23.086792
 script = SubResource("GDScript_vpdcx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791282722]
-position = Vector2(33.56349, -33.937508)
+position = Vector2(2.9999962, 1.0000038)
 scale = Vector2(0.69200164, 0.6848455)
 sprite_frames = SubResource("SpriteFrames_m3s2y")
-animation = &"Explosion"
+animation = &"Fuse"
 autoplay = "Bomb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=112744700]
-position = Vector2(20, 12)
+position = Vector2(-9.000002, -249.00002)
+rotation = -3.3215415
 shape = SubResource("CircleShape2D_3nocn")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=267873145]
