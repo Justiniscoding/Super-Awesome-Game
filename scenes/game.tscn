@@ -455,7 +455,7 @@ position = Vector2(2.5, -11.5)
 shape = SubResource("RectangleShape2D_80nbo")
 
 [node name="playersprite" type="AnimatedSprite2D" parent="player" unique_id=456489890]
-position = Vector2(67, -156)
+position = Vector2(7.000004, -58)
 scale = Vector2(2.2421875, 2.5019531)
 sprite_frames = SubResource("SpriteFrames_e2o6t")
 animation = &"new_animation"

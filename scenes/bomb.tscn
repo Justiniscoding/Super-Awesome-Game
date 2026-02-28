@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 
 func otherBombExploded(otherPosition):
 	if otherPosition != position and bombIsThrown == false:
-		if (otherPosition - position).length() < 250:
+		if (otherPosition - position).length() < 336:
 			throw(Vector2(0,0))
 
 func throw(playerDirection):

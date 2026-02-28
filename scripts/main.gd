@@ -7,6 +7,11 @@ extends Node2D
 
 func _ready() -> void:
 	play_button.pressed.connect(_on_play_pressed)
+	
+func _process(_delta) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		_on_play_pressed()
+		set_process(false)
 
 func _on_play_pressed() -> void:
 	play_button.disabled = true
@@ -26,7 +31,7 @@ func explode() -> void:
 	bomb.scale = Vector2.ONE
 
 	var tween = create_tween()
-	tween.tween_property(bomb, "scale", Vector2(10, 10), 0.6)
+	tween.tween_property(bomb, "scale", Vector2(8, 8), 0.6)
 	await tween.finished
 
 	await exploding.finished

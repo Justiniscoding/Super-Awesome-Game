@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="3_rarhs"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="4_rarhs"]
 [ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="5_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://d2v2eo6prphvt" path="res://Assets/world_tileset.png" id="6_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://e65oj6544s7d" path="res://Assets/world_tileset.png" id="6_jlsqs"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="7_q8u5g"]
 
 [sub_resource type="Theme" id="Theme_fos0i"]
