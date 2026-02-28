@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://tot24nb2v34x"]
 
-[ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="1_80nbo"]
-[ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://player1.gd" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
 size = Vector2(128, 128)
@@ -10,7 +10,7 @@ size = Vector2(128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_80nbo")
+"texture": ExtResource("2_lnu2h")
 }],
 "loop": true,
 "name": &"default",
@@ -34,7 +34,7 @@ normal = Vector2(-1, 0)
 position = Vector2(576, 324)
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=98870442]
-script = ExtResource("2_e2o6t")
+script = ExtResource("1_yqjtg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=60088318]
 position = Vector2(364, 385)
