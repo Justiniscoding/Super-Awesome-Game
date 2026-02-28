@@ -22,7 +22,7 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i, player
 	var tilemapCellPosition: Vector2i = feet_cell + dir
 
 	# Reset progress when switching blocks
-	if tilemapCellPosition != blockPosition:
+	if tilemapCellPosition != blockPosition and tilemapCellPosition != blockPosition + Vector2i(0, -128):
 		blockMiningProgress = 0.0
 		blockPosition = tilemapCellPosition
 
@@ -30,7 +30,10 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i, player
 
 	var blockType: Vector2i = get_cell_atlas_coords(blockPosition)
 	if blockType == Vector2i(-1, -1):
-		return
+		blockType = get_cell_atlas_coords(blockPosition + Vector2i(0, -1))
+		tilemapCellPosition += Vector2i(0, -1)
+		if blockType == Vector2i(-1, -1):
+			return
 
 	# Crack / break using your atlas-coord logic
 	if blockType.x % 2 == 0:
