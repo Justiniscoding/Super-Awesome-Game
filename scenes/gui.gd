@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 		get_tree().create_timer(8.0).connect("timeout", func():
 			Global.p1points = 0
 			Global.p2points = 0
-			get_tree().reload_current_scene())
+			get_tree().change_scene_to_file("res://scenes/Main.tscn"))
 		return
 
 	var minutes := int(timerTime / 60.0)
