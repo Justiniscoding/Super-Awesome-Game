@@ -28,6 +28,7 @@ func _on_play_pressed() -> void:
 
 
 func explode() -> void:
+	audio_stream_player.stop()
 	exploding.play()
 	bomb.play("Explosion")
 	bomb.scale = Vector2.ONE

@@ -504,6 +504,7 @@ position = Vector2(576, 324)
 [node name="exploder" type="AudioStreamPlayer2D" parent="." unique_id=1652641848]
 position = Vector2(521, 270)
 stream = SubResource("AudioStreamMP3_rarhs")
+volume_db = 11.178
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1980412775]
 position = Vector2(472.00006, 384.00003)
