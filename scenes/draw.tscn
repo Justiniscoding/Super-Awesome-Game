@@ -7,7 +7,7 @@
 default_font = ExtResource("2_d4hqq")
 default_font_size = 246
 
-[node name="P2Win" type="Node2D" unique_id=853665758]
+[node name="P2Win2" type="Node2D" unique_id=853665758]
 
 [node name="bg2" type="Sprite2D" parent="." unique_id=195756940]
 position = Vector2(575.7953, 325.00336)

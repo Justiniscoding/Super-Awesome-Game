@@ -2,7 +2,7 @@ extends Control
 
 signal timerOver
 
-var timerTime := 20.0
+var timerTime := 150.0
 var _done := false
 
 func updateScores() -> void:
