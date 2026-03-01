@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://tot24nb2v34x"]
 
-[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_ir15t"]
+[ext_resource type="Script" uid="uid://burb50iydwxu3" path="res://scripts/camera_2d.gd" id="1_ir15t"]
 [ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_vtaks"]
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -1021,3 +1021,6 @@ position = Vector2(5266, 4223)
 
 [node name="Bomb35" parent="." unique_id=1686143586 instance=ExtResource("5_iywne")]
 position = Vector2(4738, 5009)
+
+[node name="Bomb36" parent="." unique_id=582075228 instance=ExtResource("5_iywne")]
+position = Vector2(1303, 6847)
