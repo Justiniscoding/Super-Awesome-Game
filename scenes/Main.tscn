@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4snq7kp57tmw" path="res://Assets/video-game-explosion-animation-pixel-art-explosion-animation-frames.png" id="3_rarhs"]
 [ext_resource type="Texture2D" uid="uid://ddrkqcm5x5jvl" path="res://Assets/New Piskel (2).png" id="4_rarhs"]
 [ext_resource type="Texture2D" uid="uid://pevroq8o6tgg" path="res://Assets/kenney_voxel-pack/Spritesheets/spritesheet_tiles.png" id="5_nxtc6"]
-[ext_resource type="Texture2D" uid="uid://df0se7mgi8cvi" path="res://Assets/world_tileset.png" id="6_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://e65oj6544s7d" path="res://Assets/world_tileset.png" id="6_jlsqs"]
 [ext_resource type="Script" uid="uid://db78dg8xlswfj" path="res://scripts/TileMap.gd" id="7_q8u5g"]
 [ext_resource type="AudioStream" uid="uid://dvek5jlvntda1" path="res://Assets/freesound_community-fuse-80913.mp3" id="9_q8u5g"]
 
@@ -525,17 +525,17 @@ icon_alignment = 1
 
 [node name="bomb" type="AnimatedSprite2D" parent="play" unique_id=299588345]
 texture_filter = 1
-position = Vector2(64, 64)
+position = Vector2(16, -16)
 scale = Vector2(1.0000001, 1.0000001)
 sprite_frames = SubResource("SpriteFrames_qmy6f")
 animation = &"Fuse"
 
 [node name="Label" type="Label" parent="play" unique_id=1690771222]
 layout_mode = 0
-offset_left = 54.0
-offset_top = 73.0
-offset_right = 94.0
-offset_bottom = 101.0
+offset_left = 6.0
+offset_top = -7.0
+offset_right = 46.0
+offset_bottom = 21.0
 text = "Play"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1702360468]
