@@ -54,6 +54,8 @@ func _process(delta: float) -> void:
 		tween.play()
 
 		get_tree().create_timer(8.0).connect("timeout", func():
+			Global.p1points = 0
+			Global.p2points = 0
 			get_tree().reload_current_scene())
 		return
 
