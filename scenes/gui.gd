@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 		tween.play()
 
 		get_tree().create_timer(8.0).connect("timeout", func():
-			get_tree().change_scene_to_file("res://scenes/Main.tscn"))
+			get_tree().reload_current_scene())
 		return
 
 	var minutes := int(timerTime / 60.0)
