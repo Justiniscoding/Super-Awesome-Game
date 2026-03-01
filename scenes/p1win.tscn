@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_6ye7u"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="2_iikxo"]
+[ext_resource type="Texture2D" uid="uid://cnq0q1lop72us" path="res://Assets/New Piskel (3).png" id="3_iikxo"]
 
 [sub_resource type="Theme" id="Theme_pqas3"]
 default_font = ExtResource("2_iikxo")
@@ -21,3 +22,10 @@ theme = SubResource("Theme_pqas3")
 text = "P1 Wins"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2119136595]
+position = Vector2(1015.00006, 250)
+scale = Vector2(3.727, 3.727)
+texture = ExtResource("3_iikxo")
+hframes = 2
+vframes = 2

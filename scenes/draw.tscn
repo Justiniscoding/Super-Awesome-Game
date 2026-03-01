@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_1feld"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="2_d4hqq"]
+[ext_resource type="Texture2D" uid="uid://c30vvtnhqnqb4" path="res://Assets/idle2.png" id="3_hlovf"]
+[ext_resource type="Texture2D" uid="uid://cnq0q1lop72us" path="res://Assets/New Piskel (3).png" id="4_7u67a"]
 
 [sub_resource type="Theme" id="Theme_hlovf"]
 default_font = ExtResource("2_d4hqq")
@@ -21,3 +23,16 @@ theme = SubResource("Theme_hlovf")
 text = "Draw"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=69942687]
+position = Vector2(229, 250)
+scale = Vector2(3.7265625, 3.7265625)
+texture = ExtResource("3_hlovf")
+vframes = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=344598088]
+position = Vector2(927, 250)
+scale = Vector2(3.727, 3.727)
+texture = ExtResource("4_7u67a")
+hframes = 2
+vframes = 2
