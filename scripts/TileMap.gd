@@ -1,5 +1,7 @@
 extends TileMapLayer
 
+var diggingSound = preload("res://Assets/Rooted_Dirt_break3.ogg.mp3")
+
 var blockMiningProgress1 := 0.0
 var blockMiningProgress2 := 0.0
 var blockPosition1: Vector2i = Vector2i.ZERO
@@ -54,6 +56,14 @@ func mineBlock(playerPosition: Vector2, timeMining: float, dir: Vector2i, player
 		tilemapCellPosition += Vector2i(0, -1)
 		if blockType == Vector2i(-1, -1):
 			return
+
+	var audio = AudioStreamPlayer.new()
+	audio.stream = diggingSound
+	add_child(audio)
+	audio.play()
+	audio.volume_db = 7
+	audio.connect("finished", func():
+		audio.queue_free())
 
 	# Crack / break using your atlas-coord logic
 	if blockType.x % 2 == 0:

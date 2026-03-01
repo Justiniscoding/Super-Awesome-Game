@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://de3t7gc04ldba"]
+[gd_scene format=3 uid="uid://c10qr6wwuep1k"]
 
 [ext_resource type="Texture2D" uid="uid://bj3vyns76qum8" path="res://Assets/coin.png" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://yigly6ni0iv0" path="res://scenes/coin.wav" id="2_i64fm"]
@@ -7,9 +7,6 @@
 script/source = "extends Area2D
 @onready var area_2d: Area2D = $\".\"
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
-@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var timer: Timer = $Timer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -25,22 +22,14 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == \"player\":
-		Global.changePlayerScore(\"1\", 20)
+		Global.p1points += 20 
 		audio_stream_player.play()
-		collision_shape_2d.disabled = true
-		animated_sprite_2d.hide()
-		timer.start()
+		area_2d.queue_free()
 		# Replace with function body.
 	if body.name == \"player2\":
-		Global.changePlayerScore(\"2\", 20)
+		Global.p2points += 20
 		audio_stream_player.play()
-		collision_shape_2d.disabled = true
-		animated_sprite_2d.hide()
-		timer.start()
-
-
-func _on_timer_timeout() -> void:
-	area_2d.queue_free() # Replace with function body.
+		area_2d.queue_free()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i64fm"]
