@@ -7,6 +7,7 @@ extends Node2D
 @onready var exploding = $exploder
 @onready var label2: Label = $Label
 @onready var label_2: Label = $Label2
+@onready var label_3: Label = $Label3
 
 func _ready() -> void:
 	play_button.pressed.connect(_on_play_pressed)
@@ -21,6 +22,7 @@ func _on_play_pressed() -> void:
 	label.text = ""
 	label2.text = ""
 	label_2.text = ""
+	label_3.text = ""
 
 	bomb.play("Fuse")
 	audio_stream_player.play()
