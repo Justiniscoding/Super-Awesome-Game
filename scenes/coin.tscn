@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c10qr6wwuep1k"]
+[gd_scene format=3 uid="uid://de3t7gc04ldba"]
 
 [ext_resource type="Texture2D" uid="uid://bj3vyns76qum8" path="res://Assets/coin.png" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://yigly6ni0iv0" path="res://scenes/coin.wav" id="2_i64fm"]
@@ -7,6 +7,7 @@
 script/source = "extends Area2D
 @onready var area_2d: Area2D = $\".\"
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,12 +25,16 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == \"player\":
 		Global.p1points += 20 
 		audio_stream_player.play()
-		area_2d.queue_free()
+		animated_sprite_2d.hide()
+		audio_stream_player.connect(\"finished\", func():
+			area_2d.queue_free())
 		# Replace with function body.
 	if body.name == \"player2\":
 		Global.p2points += 20
 		audio_stream_player.play()
-		area_2d.queue_free()
+		animated_sprite_2d.hide()
+		audio_stream_player.connect(\"finished\", func():
+			area_2d.queue_free())
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i64fm"]
