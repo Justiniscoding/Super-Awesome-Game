@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b3k6wvdrim5fh"]
+
+[ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_1feld"]
+[ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="2_d4hqq"]
+
+[sub_resource type="Theme" id="Theme_hlovf"]
+default_font = ExtResource("2_d4hqq")
+default_font_size = 246
+
+[node name="P2Win" type="Node2D" unique_id=853665758]
+
+[node name="bg2" type="Sprite2D" parent="." unique_id=195756940]
+position = Vector2(575.7953, 325.00336)
+scale = Vector2(1.5977912, 1.5502231)
+texture = ExtResource("1_1feld")
+
+[node name="Label" type="Label" parent="." unique_id=1084193455]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme = SubResource("Theme_hlovf")
+text = "Draw"
+horizontal_alignment = 1
+vertical_alignment = 1

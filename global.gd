@@ -13,10 +13,19 @@ func changePlayerScore(player, amount):
 			p2points += amount
 		emit_signal("scoresChanged")
 		return
+
 	if p1points + amount >= 0:
 		p1points += amount
 		emit_signal("scoresChanged")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("getPoints", changePlayerScore)
+	connect("getPoints", Callable(self, "changePlayerScore"))
+
+func _on_timer_over() -> void:
+	print("Timer is over!")
+	if p1points > p2points:
+		get_tree().change_scene_to_file("res://scenes/p1win.tscn")
+	elif p1points==p2points:
+		get_tree().change_scene_to_file("res://scenes/draw.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/p2win.tscn")

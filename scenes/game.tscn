@@ -1,6 +1,6 @@
-[gd_scene format=4 uid="uid://tot24nb2v34x"]
+[gd_scene format=4 uid="uid://yi5ly8k1wmpo"]
 
-[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_ir15t"]
+[ext_resource type="Script" uid="uid://burb50iydwxu3" path="res://scripts/camera_2d.gd" id="1_ir15t"]
 [ext_resource type="Texture2D" uid="uid://b28tns3vvgsdf" path="res://Assets/CleanShot 2026-02-28 at 17.09.03@2x.png" id="1_vtaks"]
 [ext_resource type="Script" uid="uid://45s0fe57lwwm" path="res://scripts/player1.gd" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://cbk47qhicy5xs" path="res://icon.svg" id="2_lnu2h"]
@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://b85woad44j4n1" path="res://scenes/gui.gd" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://b0msqjd2rvvt7" path="res://Assets/miner2bombright.png" id="11_bt5mj"]
 [ext_resource type="AudioStream" uid="uid://dgkiyn6itkf1a" path="res://Assets/Rooted_Dirt_break3.ogg.mp3" id="15_37s47"]
-[ext_resource type="PackedScene" uid="uid://c10qr6wwuep1k" path="res://scenes/coin.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://de3t7gc04ldba" uid="uid://c10qr6wwuep1k" path="res://scenes/coin.tscn" id="15_ir15t"]
 [ext_resource type="FontFile" uid="uid://d7qpfcvcjaqa" path="res://Assets/dreamplanner.otf" id="16_rysoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
