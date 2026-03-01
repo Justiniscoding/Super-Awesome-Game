@@ -25,12 +25,14 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == \"player\":
 		Global.p1points += 20 
 		audio_stream_player.play()
+		Global.emit_signal(\"scoresChanged\")
 		animated_sprite_2d.hide()
 		audio_stream_player.connect(\"finished\", func():
 			area_2d.queue_free())
 		# Replace with function body.
 	if body.name == \"player2\":
 		Global.p2points += 20
+		Global.emit_signal(\"scoresChanged\")
 		audio_stream_player.play()
 		animated_sprite_2d.hide()
 		audio_stream_player.connect(\"finished\", func():
